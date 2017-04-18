@@ -1,0 +1,220 @@
+
+html, body{
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background: #FFF;
+}
+
+#main{
+	position: absolute;
+	width: 1200px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	top: 80px;
+	left: 0;
+	right: 0;
+}
+
+#msgBoard{
+	position: fixed;
+	width: 280px;
+	height: 418px;
+	top: 80px;
+	border: 1px solid #ccc;
+	margin-left: 920px;
+}
+
+	
+	#textField{
+		position: absolute;
+		width: 100%;
+		height: 40px;
+		border-top: 1px solid #CCC;
+		bottom: 0px;
+	}
+
+	#inputMessage{
+		margin: 0;
+		padding: 0px 5px 0px 5px;
+		width: 270px;
+		height: 40px;
+		border: none;
+	}
+
+
+	#msgBoardList{
+		position: relative;
+		margin: 0px;
+		width: 100%;
+		height: 377px;
+		overflow: auto;
+	}
+
+		.msgListItem{
+			padding-left: 60px;
+			padding-right: 30px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+
+		.noMsgSent{
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+
+		.msgContainer{
+			height: auto;
+			min-height: 50px;
+			width: 100%;
+		}
+
+			.msgImageContainer{
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				float: left;
+				margin-left: -50px;
+				margin-right: 10px;
+				display: inline-block;
+				overflow: hidden;
+			}
+
+			.msgImage{
+				max-width: 40px;
+				width: auto;
+				height: auto;
+			}
+
+			.message{
+				height: auto;
+			}
+
+			.msgTimestamp{
+				color: #999;
+				font-size: 10pt;
+			}
+
+#ride{
+	position: relative;
+	float: left;
+	width: 900px
+}
+
+#rideDetails{
+	width: 500px;
+	height: 380px;
+	float: left;
+	position: relative;
+	padding-left: 20px
+}
+
+	#startInfo{
+		background: #F7F7F7;
+		padding-right: 20px;
+		margin-left: -20px;
+		padding-left: 20px;
+	}
+
+	#routeDetails{
+		display: block;
+		position: relative;
+
+	}
+
+		#routeDetails li{
+			display: inline-block;
+			margin-right: 20px;
+		}
+
+		#routeDetails h5{
+			margin: 0;
+		}
+
+
+
+#riders{
+	width: 400px;
+	height: 380px;
+	float: right;
+	background: #FFF;
+	border-left: none;
+	padding-left: 20px;
+}
+
+	#ridersList{
+		display: block;
+		overflow: auto;
+		height: 132px;
+		overflow: auto;
+	}
+
+	#ridersList li{
+		display: inline-block;
+		margin-right: 8px;
+	}
+
+	.riderListImageContainer{
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: inline-block;
+		overflow: hidden;
+	}
+
+	.riderListImg {
+		max-width: 60px;
+		width: auto;
+		height: auto;
+	}
+
+#map-canvas{
+	width: 900px;
+	height: 300px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	float: right;
+}
+
+
+#elevationGraph{
+	width: 900px;
+	height: 120px;
+  	overflow: hidden;
+}
+
+#routeInfoContainer{
+	width: 100%;
+	height: 200px;
+}
+
+
+#bJoinRide{
+	position: relative;
+	right: 0px
+}
+
+#bLeaveRide{
+	position: relative;
+	right: 0px
+}
+
+.noMargin{
+	margin: 0;
+}
+
+.noPadding{
+	padding: 0;
+}
+
+.flat{
+	margin: 0.5rem 0 1rem 0;
+}
+
+.border {
+	border: 1px solid #ccc;
+}

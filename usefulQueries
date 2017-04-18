@@ -1,0 +1,17 @@
+
+
+SELECT DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rides_repeat.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, 'UTC'),'%H:%i:%s') AS UTCStartTime, DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rides_repeat.repeat_start MINUTE_SECOND)), TIME(rides.endTime)), rides.tzName, 'UTC'),'%H:%i:%s') AS UTCEndTime, rides.startTime, rides.endTime FROM rides_repeat LEFT JOIN rides ON rides.ID = rides_repeat.ride_id
+
+UPDATED BELOW
+
+SELECT rides.*, rr.*, mrr.GroupID, 
+DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, 'UTC'),'%H:%i:%s') AS UTCStartTime, 
+DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.endTime)), rides.tzName, 'UTC'),'%H:%i:%s') AS UTCEndTime ,
+DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, 'America/New_York'),'%H:%i:%s') AS startTimeAdjust,
+DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.endTime)), rides.tzName, 'America/New_York'),'%H:%i:%s') AS endTimeAdjust,
+UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_start, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), rides.startTime), '%Y-%m-%d %T'), rides.tzName, 'America/New_York'), '%y-%m-%d'),"UTC",@@session.time_zone)) AS startDayAdjust1,
+DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_start, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), rides.startTime), '%Y-%m-%d %T'), rides.tzName, 'America/New_York'), '%y-%m-%d %T') AS startDayAdjust2,
+ CONVERT_TZ(FROM_UNIXTIME(rr.repeat_start, '%y-%m-%d %T'), @@session.time_zone,'UTC') AS startDay,
+ 
+ UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_end, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), IFNULL(rides.endTime,"")), '%Y-%m-%d %T'), rides.tzName, 'America/New_York'), '%y-%m-%d'),"UTC",@@session.time_zone)) AS endDayAdjust1
+FROM `rides` LEFT JOIN `rides_repeat` RR ON RR.`ride_id` = rides.`ID` LEFT JOIN `multi_rider_rides` mrr ON mrr.RideID = rides.ID

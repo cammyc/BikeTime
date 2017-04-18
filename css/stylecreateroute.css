@@ -1,0 +1,250 @@
+#map-canvas{
+   position: absolute;
+   width: 100%;
+   top: 64px;
+   bottom: 0px;
+   z-index: 0;
+}
+
+#uploadRoute{
+   width: 400px;
+   margin-bottom:  0px !important;
+   pointer-events: auto;
+}
+
+   .file-field{
+      margin-bottom: 10px !important;
+   }
+
+   .file-path{
+      margin-bottom: 5px !important;
+   }
+
+   #fileButton{
+      margin-top: 2.5px;
+      margin-left: 2px;
+   }
+
+#filePath {
+   margin-right: 10px;
+}
+
+.infoContainer{
+   height: auto;
+   width: 95%;
+   position: absolute;
+    z-index: 2;
+   margin: auto;
+   left: 0; bottom: 25px; right: 0;
+   overflow: hidden;
+
+   pointer-events: none;
+}
+
+#routeInfo{
+   width: 100%; 
+   cursor: pointer;
+   background: rgba(255,255,255,.8);
+   -moz-box-shadow: 4px 0px 4px #7f8c8d;
+   -webkit-box-shadow: 4px 0px 4px #7f8c8d;
+   box-shadow: 2px 0px 5px #7f8c8d;
+
+   pointer-events: auto;
+}
+
+#routeInfo table{
+   width: 100%;
+   position: relative;
+   text-align: center;
+}
+
+#routeInfo table td{
+   width: 25%; 
+   text-align: center;
+}
+
+#elevationGraph{
+   position: relative;
+   width: 100%;
+   height: 0px;
+   background: rgba(255,255,255,.8);
+}
+
+#wrapper{
+   width: 100%;
+}
+
+p2{
+font-family: 'Lato', sans-serif;
+font-size: 18pt;
+}
+
+p1{
+font-family: 'Lato', sans-serif;
+}
+
+#saveRoute{
+display: inline-block;
+z-index: 4;
+float: right;
+margin-right: 15px;
+vertical-align: middle;
+
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+}
+
+
+.saveDialog {
+width: 100%;
+height: 100%;
+-webkit-perspective: 1000;
+background: rgba(0,0,0,0.75);
+position: fixed;
+z-index: 110;
+left: 0;
+top: 0;
+bottom: 0;
+right: 0;
+}
+
+.saveDialog .content{
+   height: 400px;
+   width: 600px;
+   position: absolute;
+   background: #F0F0F0;
+   z-index: 50;
+   position: absolute;
+   top:-10%;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+}
+
+.saveDialog hr{
+   border-color: #ecf0f1;
+}
+
+.saveDialog h4{
+   margin-left: 20px;
+}
+
+#prompt{
+   margin-left: 20px;
+   font-size: 10pt;
+   color: #333;
+}
+
+.routeInput{
+   margin-left: 20px;
+}
+
+.label{
+   color: #666;
+   font-size: 10pt;
+}
+
+input,textarea{
+   color: #666;
+   font-size: 11pt;
+   width: 90%;
+   background: #FFF;
+   border-radius: 2px;
+   border: 1px solid #ccc;
+   height: 25px;
+   padding-left: 5px;
+}
+
+#description{
+   height: 80px;
+   resize: none;
+   background: #FFF;
+
+   width: 90%;
+}
+.saveDialog .content .routeInput .private #cbPrivate{
+   width: auto;
+}
+
+.saveDialog .content .routeInput .private label{
+   position: absolute;
+   text-align: center;
+   margin-top: 8px;
+}
+
+.saveDialog .content .actions{
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   cursor: pointer;
+}
+
+.cancel{
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 1px;
+color: #333;
+display: inline-block;
+line-height: 1;
+position: relative;
+white-space: nowrap;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+font-size: 14px;
+min-height: 34px;
+padding: 9px 10px;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+transition: border-color 0.1s linear,background 0.1s linear,color 0.1s linear;
+-webkit-transition: border-color 0.1s linear,background 0.1s linear,color 0.1s linear;
+-moz-transition: border-color 0.1s linear,background 0.1s linear,color 0.1s linear;
+-o-transition: border-color 0.1s linear,background 0.1s linear,color 0.1s linear;
+-ms-transition: border-color 0.1s linear,background 0.1s linear,color 0.1s linear;
+}
+
+.cancel:hover{
+      background-color:#F0F0F0 
+   }
+
+.save{
+
+background-color: #333;
+border-color: #333;
+border: 1px solid #ccc;
+border-radius: 1px;
+color: #fff;
+display: inline-block;
+line-height: 1;
+position: relative;
+white-space: nowrap;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+font-size: 14px;
+min-height: 34px;
+padding: 9px 10px;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+transition: border-color 0.1s linear,background 0.1s linear,color 0.1s linear;
+-webkit-transition: border-color 0.1s linear,background 0.1s linear,color 0.1s linear;
+-moz-transition: border-color 0.1s linear,background 0.1s linear,color 0.1s linear;
+-o-transition: border-color 0.1s linear,background 0.1s linear,color 0.1s linear;
+-ms-transition: border-color 0.1s linear,background 0.1s linear,color 0.1s linear;
+}
+
+.saveDialog .content .actions .save:hover{
+   background-color:#464646; 
+}

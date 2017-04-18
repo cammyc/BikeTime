@@ -1,0 +1,309 @@
+html {
+	height: 100%; 
+	background: #ECEFF1;
+}
+body { height: 100%; margin: 0; padding: 0 }
+
+#main {
+	position: relative;
+	width: 90%;
+	height: auto;
+	margin: auto;
+	margin-top: 14px;
+}
+
+#tabs{
+	width: 100%;
+	position: relative;
+	height: 50px;
+	margin: 0;
+	color: #35cf76;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .8px;
+}
+
+
+#groupStream{
+	position: relative;
+	width: 84%;
+	height: auto;
+	float: right;
+	right: 0;
+}
+
+	#map-container{
+		width: 100%;
+		height: 550px;
+		margin-bottom: 0;
+	}
+
+		#timerange{
+			position: absolute;
+			width: 320px;
+			height: 50px;
+			left: 50%;
+			top: 15px;
+			margin-left: -160px;
+			padding-right: 20px;
+			padding-left: 20px;
+			border: 0px solid;
+			background-color: #FFF;
+			z-index: 4;
+			-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		}
+
+		#dash{
+			font-weight: bold;
+			font-size: 12pt;
+		}
+
+		#map-canvas{
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+		}
+
+#basicInfo{
+	position: fixed;
+	width: 14%;
+	height: auto;
+	top: 130px;
+	float: left;
+}
+
+	#infoText{
+		position: relative;
+		padding-left: 15px;
+	}
+
+	#bJoinGroup, #bLeaveGroup{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+.active{
+	color: #000;
+}
+
+#rideListContainer{
+	height: auto;
+	width: 49%;
+	float: left;
+	margin: 0;
+}
+
+#rideList{
+	height: 400px;
+	width: 100%;
+	overflow: auto;
+}
+
+#msgBoardContainer{
+	height: auto;
+	width: 50%;
+	margin-top: 15px;
+	float: right;
+}
+
+	#msgBoard {
+		height: 500px;
+		width: 100%;
+		overflow: auto;
+		margin-bottom: 10px;
+	}
+	
+
+	#sendMessage{
+		width: 100%;
+		padding: 10px;
+	}
+
+	#message{
+		width: 80%;
+		float: left;
+		margin: 0;
+	}
+
+		.msgListItem{
+			padding-left: 60px;
+			padding-right: 30px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+
+		.msgContainer{
+			height: auto;
+			min-height: 50px;
+			width: 100%;
+		}
+
+			.msgImage{
+				width: 40px;
+				height: 40px;
+				margin-left: -50px;
+				margin-right: 10px;
+				border-radius: 50%;
+				float: left;
+			}
+
+			.message{
+				height: auto;
+			}
+
+			.msgTimestamp{
+				color: #999;
+				font-size: 10pt;
+			}
+
+.noMargin{
+	margin: 0;
+}
+
+
+
+	#messageButton{
+		width: 18%;
+		float: right;
+		margin: 0;
+		color: #FFF;
+		margin-top: 5px;
+	}
+
+
+
+/*********************************Below is for member page**********************/
+
+#memContainer, #pendingMemberContainer{
+	width: 1020px;
+	height: auto;
+	text-align: justify;
+	-ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-bottom: 20px;
+
+}
+
+	#memBlock{
+		margin-top:20px;
+		position: relative;
+		width: 150px;
+		height: 150px;
+		vertical-align: top;
+	    display: inline-block;
+	    margin-left: 10px;
+	    margin-right: 10px;
+	}
+
+	#memName{
+		position: absolute;
+		bottom: 0px;
+	    text-align: center;
+	    width: 100%;
+	    color: #FFF;
+	    background: rgba(0,0,0,.5);
+	    margin: 0;
+	}
+
+	#memAdmin{
+		position: absolute;
+		top: 0px;
+	    text-align: center;
+	    width: 100%;
+	    color: #FFF;
+	    background: rgba(0,0,0,.5);
+	    margin: 0;
+	}
+
+	#removeMember{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -40px;
+		margin-top: -40px;
+		visibility: hidden;
+		opacity: 0;
+		text-align: center;
+  		transition:opacity 0.5s linear;
+	}
+
+	#makeAdmin{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -40px;
+		margin-top: 10px;
+		visibility: hidden;
+		opacity: 0;
+		text-align: center;
+  		transition:opacity 0.5s linear;
+	}
+
+	#acceptMember, #declineMember{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -40px;
+		text-align: center;
+	}
+
+	#acceptMember{
+		margin-top: -40px;
+	}
+
+	#declineMember{
+		margin-top: 10px;
+	}
+
+	#memBlock:hover #removeMember{
+		opacity: .8;
+		visibility: visible;
+	}
+
+	#memBlock:hover #makeAdmin{
+		opacity: .8;
+		visibility: visible;
+	}
+
+
+	.stretch {
+	    width: 100%;
+	    display: inline-block;
+	    font-size: 0;
+	    line-height: 0
+	}
+
+	#profPic{
+		width: 100%;
+		height: 100%;
+	}
+
+
+/*********************************Below is for private group************************/
+#privateGroupContainer{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 500px;
+	top: 50%;
+	margin-top: -250px;
+}
+
+	#privateGroupInfo{
+		height: auto;
+		overflow: auto;
+		padding-left: 20px;
+		max-height: 295px;
+	}
+
+	#privateGroupPrompt{
+		height: auto;
+		max-height: 195px;
+	}

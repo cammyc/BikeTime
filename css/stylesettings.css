@@ -1,0 +1,43 @@
+html { 
+ /* background: url(../images/create_account.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+body { height: 100%; margin: 0; padding: 0; background: #ECEFF1}
+
+#main{
+	position: absolute;
+	width: 1200px;
+	height: 600px;
+	left: 50%;
+	margin-left: -600px;
+	top: 400px;
+	margin-top: -300px;
+}
+
+.collection{
+	float: left;
+	position: fixed;
+	width: 200px;
+	height: auto;
+	background: #FFF;
+	-webkit-box-shadow: 2px 2px 5px 1px #CCC;
+    -moz-box-shadow: 2px 2px 5px 1px #CCC;
+    box-shadow: 2px 2px 5px 1px #CCC;
+}
+
+.selection{
+	position: relative;
+	width: 980px;
+	height: auto;
+	float: right;
+	background: #FFF;
+	margin-bottom: 50px;
+	-webkit-box-shadow: 2px 2px 5px 1px #CCC;
+    -moz-box-shadow: 2px 2px 5px 1px #CCC;
+    box-shadow: 2px 2px 5px 1px #CCC;
+}
+

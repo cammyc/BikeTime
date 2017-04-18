@@ -1,0 +1,21 @@
+#submit{
+position: relative;
+float: right;
+right: 20px;
+bottom: 10px;
+}
+
+#noPassword{
+	margin-left: 100px;
+	margin-right: 100px;
+	text-align: center;
+}
+
+#emailWarning{
+	visibility: hidden;
+}
+
+#pwWarning{
+	visibility: hidden;
+	color: red;
+}

@@ -1,0 +1,69 @@
+html { 
+	height: 100% ;
+}
+
+body { 
+	height: 100%; margin: 0; padding: 0; background: #ECEFF1;
+}
+
+
+#main {
+	position: relative;
+	width: 1200px;
+	height: auto;
+	margin-left:auto;
+    margin-right:auto;
+	top: 60px;
+
+}
+
+
+#search{
+	position: relative;
+	height: 150px;
+}
+
+#searchBox{
+	width: 900px;
+	height: 150px;
+	background: #FFF;
+	float: left;
+}
+
+#inviteBox{
+	width: 295px;
+	height: 150px;
+	background: #FFF;
+	float: right;
+}
+
+.shadow {
+	border-radius: 2px;
+	-webkit-box-shadow: 2px 2px 5px 1px #CCC;
+    -moz-box-shadow: 2px 2px 5px 1px #CCC;
+    box-shadow: 2px 2px 5px 1px #CCC;
+}
+
+#invite{
+	position: relative;
+	height: 88px;
+	top: 50%;
+	margin-top: -44;
+}
+
+
+#invite a{
+	width: 220px;
+}
+
+
+#results{
+	width: 100%;
+	height: 600px;
+	background-color: #FFF;
+	margin-top: 100px;
+	border-radius: 2px;
+	-webkit-box-shadow: 2px 2px 5px 1px #CCC;
+    -moz-box-shadow: 2px 2px 5px 1px #CCC;
+    box-shadow: 2px 2px 5px 1px #CCC;
+}

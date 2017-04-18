@@ -1,0 +1,340 @@
+html { 
+	height: 100% ;
+}
+
+body { 
+	height: 100%; margin: 0; padding: 0;
+}
+
+.main{
+	position: absolute;
+	width: 1280px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: auto;
+	margin-top: 60px;
+}
+
+
+.rightPanel {
+	width: 900px;
+	height: auto;
+	float: right;
+}
+
+.leftPanel {
+	height: auto;
+	min-height: 350px;
+	width: 360px;
+	position: fixed;
+    float: left;
+}
+
+.profilePicPlusText{
+    position: relative;
+    height: auto;
+    width: 100%;
+    color: #FFF;
+    padding: 10px;
+}
+
+#profileImageContainer{
+	position: relative;
+	border-radius:50%; 
+	width: 120px;
+	height: 120px;
+	float: left;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+#profileImage{
+	position: relative;
+	max-width: 120px;
+	width: auto;
+	height: auto;
+}
+
+
+#nameAgeGender{
+	position: relative;
+	float: right;
+	width: 180px;
+	top: 10px;
+}
+
+	#name{
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		position: relative;
+		font-size: 18px;
+		color: #333;
+		display: inline;
+	}
+
+	#age{
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		position: relative;
+		font-size: 12px;
+		color: #555;
+		display: inline;
+	}
+
+	#gender{
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		position: relative;
+		font-size: 12px;
+		color: #555;
+		display: inline;
+	}
+
+#addFriendContainer{
+	position: relative;
+	width: 280px;
+}
+
+	#addFriend {
+		display: none;
+		position: relative;
+		clear: both;
+	}
+
+.tabs li.tab a{
+	color: #039be5;
+}
+
+.tabs li.tab a:hover {
+	color: #8CD5F9; 
+}
+
+.tabs .indicator{
+	background-color: #039be5;
+}
+
+#alertsFriendsGroups{
+	height: auto;
+	max-height: 400px;
+	overflow: auto;
+}
+
+	#alerts{
+		width: 100%;
+		height: auto;
+	}
+
+	#alerts li{
+		width: 100%;
+		height: 60px;
+		border-bottom: 1px #CCC solid;
+		display: table;
+		padding: 10px;
+	}
+
+	.alertImage{
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		float: left;
+	}
+
+	.alertText{
+		float: right;
+		margin: 0;
+		width: 230px;
+		font-size: 10pt;
+	}
+
+	.acceptDecline{
+		margin-top: 5px;
+		width: 230px;
+		float: right;
+	}
+
+	#friendsList{
+		display: block;
+		overflow: auto;
+		width: 100%;
+		height: auto;
+		overflow: auto;
+		text-decoration: none;
+	}
+
+	#friendsList li{
+		display: inline-block;
+		margin-right: 8px;
+	}
+
+	.userImageContainer{
+		width: 60px;
+		height: 60px;
+		position: relative;
+		border-radius: 50%;
+		margin-bottom: 10px;
+		display: inline-block;
+		overflow: hidden;
+	}
+
+	.riderListImg {
+		position: absolute;
+		max-width: 60px;
+		height: auto;
+		width: auto;
+	}
+
+	.initialContainer{
+		position: absolute;
+		z-index: 5;
+		width: 60px;
+		height: 60px;
+		margin: 0;
+	}
+
+	.friendsInitial{
+		position: absolute;
+		z-index: 5;
+		width: 60px;
+		height: 20px;
+		text-align: center;
+		bottom: 0;
+		color: #FFF;
+		margin: 0;
+	}
+
+	#groupsList{
+		width: 100%;
+		height: auto;
+	}
+
+	#groupsList li{
+		width: 100%;
+		height: 60px;
+		border-bottom: 1px #CCC solid;
+		display: table;
+		padding: 10px;
+	}
+
+
+	.groupLogo {
+		height: 60px;
+		width: 60px;
+		margin-right: 10px;
+		border-radius: 50%;
+	}
+
+	.groupName{
+		float: right;
+		margin: 0;
+		width: 220px;
+		font-size: 10pt;
+	}
+
+#upcomingRides{
+	position: relative;
+	width: 900px;
+	height: 400px;
+}
+
+#map-canvas {
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+#timerange{
+	position: absolute;
+	width: 290px;
+	height: 40px;
+	left: 50%;
+	top: 15px;
+	margin-left: -160px;
+	padding-right: 20px;
+	padding-left: 20px;
+	border: 0px solid;
+	background-color: rgba(255,255,255,0.8);
+	z-index: 4;
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+#datetimepicker1, #datetimepicker2{
+	height: 2rem;
+}
+
+#dash{
+	font-weight: bold;
+	font-size: 12pt;
+	line-height: 100%;
+}
+
+#creatorType{
+	z-index: 5;
+	position: absolute;
+	right: 10px;
+	bottom: 25px;
+	width: 200px;
+	padding-top: 5px;
+	background-color: rgba(255,255,255,.9);
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  	-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+	#creatorType .row{
+		margin: 0;
+	}
+
+#routes{
+	position: relative;
+	width: 900px;
+	height: auto;
+}
+
+#routeList{
+	width: auto;
+	height: auto;
+	overflow-x:auto;
+	overflow-y:hidden;
+	white-space: nowrap;
+	margin: 0;
+}
+
+#routeList li{
+	position: relative;
+	height: 140px;
+	width: 225px;
+	background-color: #FFF;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.mapThumbnail{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	z-index: 0;
+	pointer-events: none;
+}
+
+.routeTitle{
+	width: 100%;
+	z-index: 1;
+	margin: 0;
+	position: absolute;
+	overflow-x: hidden;
+	text-align: center;
+	background: rgba(255,255,255,.5);
+	font-weight: bold;
+}
+
+.routeInfo{
+	position: absolute;
+	width: 100%;
+	height: 118px;
+	background: rgba(255,255,255,.5);
+	z-index: 2;
+	bottom: 0;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}

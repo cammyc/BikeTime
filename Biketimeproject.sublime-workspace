@@ -1,0 +1,1249 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rid",
+				"rideLevel"
+			],
+			[
+				"start",
+				"startDate"
+			],
+			[
+				"ride",
+				"rideType"
+			],
+			[
+				"timepi",
+				"timepicker2"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"vali",
+				"validForm"
+			],
+			[
+				"_rid",
+				"_rideType"
+			],
+			[
+				"repea",
+				"repeatInterval"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"im",
+				"imgID"
+			],
+			[
+				"ma",
+				"max-height"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"file",
+				"fileName"
+			],
+			[
+				"is",
+				"isGroup"
+			],
+			[
+				"la",
+				"label	Tag"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"image",
+				"imageType"
+			],
+			[
+				"ajax",
+				"ajaxRequest"
+			],
+			[
+				"aj",
+				"ajaxRequest"
+			],
+			[
+				"imag",
+				"imageType"
+			],
+			[
+				"vis",
+				"visibility"
+			],
+			[
+				"bl",
+				"block"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"date",
+				"datetimepicker1"
+			],
+			[
+				"star",
+				"startDate"
+			],
+			[
+				"stare",
+				"startDate"
+			],
+			[
+				"init",
+				"initializeRideEditSelector"
+			],
+			[
+				"rideTi",
+				"rideTitle"
+			],
+			[
+				"my",
+				"myRide"
+			],
+			[
+				"prof",
+				"profile"
+			],
+			[
+				"enc",
+				"encryptedCookie"
+			],
+			[
+				"iss",
+				"isset"
+			],
+			[
+				"up",
+				"updateResulte"
+			],
+			[
+				"route",
+				"routeID"
+			],
+			[
+				"dele",
+				"deleteRoute"
+			],
+			[
+				"routeInc",
+				"routeIncrementerH"
+			],
+			[
+				"jsn",
+				"json_encode"
+			],
+			[
+				"direc",
+				"directionsDisplay"
+			],
+			[
+				"new",
+				"newCoords"
+			],
+			[
+				"ROUT",
+				"routeID"
+			],
+			[
+				"elev",
+				"elevationData"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"ele",
+				"elevationData"
+			],
+			[
+				"total",
+				"totalDist"
+			],
+			[
+				"tot",
+				"totalDist"
+			],
+			[
+				"cal",
+				"calcDistance"
+			],
+			[
+				"el",
+				"elevationData"
+			],
+			[
+				"way",
+				"waypoint"
+			],
+			[
+				"eleva",
+				"elevationData"
+			],
+			[
+				"l",
+				"location"
+			],
+			[
+				"red",
+				"reducedArray"
+			],
+			[
+				"uploa",
+				"uploadedRoute"
+			],
+			[
+				"coo",
+				"coordResultArray"
+			],
+			[
+				"co",
+				"coorResultArray"
+			],
+			[
+				"to",
+				"totalDist"
+			],
+			[
+				"coor",
+				"coordInfoArray"
+			],
+			[
+				"m",
+				"mysqli"
+			],
+			[
+				"int",
+				"intval"
+			],
+			[
+				"menu",
+				"menuProfile"
+			],
+			[
+				"member",
+				"memberRidesArray"
+			],
+			[
+				"mem",
+				"memberRides"
+			],
+			[
+				"grou",
+				"groupRides"
+			],
+			[
+				"memberR",
+				"memberRideQuery"
+			],
+			[
+				"group",
+				"groupRides"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"sli",
+				"slideUp"
+			],
+			[
+				"mi",
+				"min-width"
+			],
+			[
+				"commen",
+				"commentText"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"_co",
+				"_commentList"
+			],
+			[
+				"c",
+				"c"
+			],
+			[
+				"groupM",
+				"groupMsgComment"
+			],
+			[
+				"inp",
+				"_inputField"
+			],
+			[
+				"messa",
+				"messageArray"
+			],
+			[
+				"mes",
+				"messageArray"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"msg",
+				"msgImage"
+			],
+			[
+				"style",
+				"styleContainer"
+			],
+			[
+				"membe",
+				"memberProfile"
+			],
+			[
+				"postAc",
+				"postActionDetails"
+			],
+			[
+				"accep",
+				"acceptedGroupMembers"
+			],
+			[
+				"re",
+				"remove"
+			],
+			[
+				"acc",
+				"acceptMember"
+			],
+			[
+				"on",
+				"onlyAdmin"
+			],
+			[
+				"gr",
+				"groupID"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"remo",
+				"removeMember"
+			],
+			[
+				"Group",
+				"Group_ID"
+			],
+			[
+				"qu",
+				"query"
+			],
+			[
+				"profPic",
+				"profPicURL"
+			],
+			[
+				"getMem",
+				"getMembersRequest"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"get",
+				"get	Get Elements"
+			],
+			[
+				"rout",
+				"routeIncrementerT"
+			],
+			[
+				"jso",
+				"json_decode"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"user",
+				"userID"
+			],
+			[
+				"last",
+				"lastName"
+			],
+			[
+				"center",
+				"center-align"
+			],
+			[
+				"friend",
+				"friendshipStatus"
+			],
+			[
+				"getFr",
+				"getFriendshipStatus"
+			],
+			[
+				"join",
+				"joinedRidesQuery"
+			],
+			[
+				"crea",
+				"createdRidesQuery"
+			],
+			[
+				"repe",
+				"repeat_start"
+			],
+			[
+				"gro",
+				"groupName"
+			],
+			[
+				"hidd",
+				"hiddenInput"
+			],
+			[
+				"acce",
+				"acceptRequest"
+			],
+			[
+				"update",
+				"updateFriendRequests"
+			],
+			[
+				"frien",
+				"friendRequests"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"row",
+				"row"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"ta",
+				"table-cell"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"fir",
+				"firstName"
+			],
+			[
+				"frie",
+				"friendRequests"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"userID",
+				"userID1"
+			],
+			[
+				"reque",
+				"requesterID"
+			],
+			[
+				"fri",
+				"friendRequests"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "ajax/ajax_update_ride.php",
+			"settings":
+			{
+				"buffer_size": 1244,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "DatabaseHelper/databaseHelper.php",
+			"settings":
+			{
+				"buffer_size": 33342,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Ride/index.php",
+			"settings":
+			{
+				"buffer_size": 22702,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/ride_Helper.js",
+			"settings":
+			{
+				"buffer_size": 9402,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "PlanRide/index.php",
+			"settings":
+			{
+				"buffer_size": 26993,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "PlanRide/processride.php",
+			"settings":
+			{
+				"buffer_size": 2978,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "//Cameron Connor\n//2015/10/14\n//Lab\n//calculate grades\n\n#include <iostream>\n#include <fstream>\nusing namespace std;\n\nint main(int argc, char* argv[])\n{\n	ifstream percentGrade;\n	percentGrade.open(argv[1]);\n	\n	ifstream grades;\n	grades.open(argv[2]);\n	\n	float sum = 0.0;\n	float count = 0.0;\n	float finalGrade = 0.0;\n	float perent = 0.0;\n	\n	string score = \"\";\n	string percentString = \"\";\n	\n	while(grades >> score){\n		sum = sum + stof(score);\n		count++;\n		\n		if(grades.peek() == '\\n' || grades.eof()){\n			getline(percentGrade, percentString);\n			int index = percentString.find(\" \");\n			float percent = stof((percentString.substr(index+1)));\n			percent = percent/100.0  ;\n			\n			float avgScore = sum/count;\n			float contGrade = avgScore*percent;\n			finalGrade = finalGrade+contGrade;\n			\n			count = 0.0;\n			sum = 0.0;\n		}\n	}\n	\n	cout << finalGrade << endl;\n	\n	percentGrade.close();\n	grades.close();\n	\n}\n",
+			"file": "/C/Users/Cam/Dropbox/Fall 2015/C++/Lab/GradeCalc.cpp",
+			"file_size": 894,
+			"file_write_time": 130893145110000000,
+			"settings":
+			{
+				"buffer_size": 896,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/styleRide.css",
+			"settings":
+			{
+				"buffer_size": 2739,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Cam/Dropbox/Fall 2015/C++/Lab/GradeWeighting.txt",
+		"/C/Users/Cam/Dropbox/Fall 2015/C++/lectureCode/startCpp.cpp",
+		"/C/Users/Cam/Dropbox/Homework/Assignment1/Assignment1.cpp",
+		"/C/Users/Cam/Dropbox/Homework/Assignment4/CommunicationNetwork.cpp",
+		"/C/Users/Cam/Dropbox/Fall 2015/Python/Homework/dna1.txt",
+		"/C/Users/Cam/Dropbox/Fall 2015/Python/Homework/DNAresults.py",
+		"/C/Users/Cam/Dropbox/Homework/Assignment4/Assignment4.cpp",
+		"/C/Users/Cam/Dropbox/Homework/Assignment4/main.cpp",
+		"/C/Users/Cam/Dropbox/Fall 2015/C++/Project2/Notebook.cpp",
+		"/C/Users/Cam/Dropbox/Lectures/Lecture9/src/Elevator.cpp",
+		"/C/Users/Cam/AppData/Local/Temp/Temp1_Cameron_Connor_HW4.zip/DNAresults.py",
+		"/C/Users/Cam/Dropbox/Homework/Assignment3/CommunicationNetwork.cpp",
+		"/C/Users/Cam/Dropbox/Fall 2015/C++/Project2/Notebook.h",
+		"/C/Users/Cam/Dropbox/Lectures/Lecture9/include/Elevator.h",
+		"/C/Users/Cam/Dropbox/Lectures/Lecture9/main.cpp",
+		"/C/Users/Cam/Dropbox/Fall 2015/C++/Project2/Driver.cpp",
+		"/C/Users/Cam/AppData/Local/Temp/Temp1_Lecture9ClassesAndObjects.zip/Lecture34-ClassesAndObjectsSeparateFiles/main.cpp",
+		"/C/Users/Cam/AppData/Local/Temp/Temp1_Lecture9ClassesAndObjects.zip/Lecture34-ClassesAndObjectsSeparateFiles/include/Automobile.h",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_get_friends.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_get_user_rides.php",
+		"/C/xampp/htdocs/Projects/BikeTime/js/ajax_update_ride.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax-single-group-rides.php",
+		"/C/xampp/htdocs/Projects/BikeTime/js/formValidator.js",
+		"/C/xampp/htdocs/Projects/BikeTime/css/stylePlanRide.css",
+		"/C/xampp/htdocs/Projects/BikeTime/PlanRide/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_get_group_members.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_upload_image.php",
+		"/C/xampp/htdocs/Projects/BikeTime/js/imageParser.js",
+		"/C/xampp/htdocs/Projects/BikeTime/Group/accepted.php",
+		"/C/xampp/htdocs/Projects/BikeTime/css/styleProf.css",
+		"/C/xampp/htdocs/Projects/BikeTime/css/styleGroupMembers.css",
+		"/C/xampp/htdocs/Projects/BikeTime/Profile/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/js/profileHelper.js",
+		"/C/xampp/htdocs/Projects/BikeTime/js/planRideHelper.js",
+		"/C/xampp/htdocs/Projects/BikeTime/js/friendHelper.js",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/index.php",
+		"/C/Users/Cam/Dropbox/Fall 2015/C++/Homework/HW7/Crypto.cpp",
+		"/C/Users/Cam/Dropbox/Fall 2015/C++/lectureCode/ArrayEx1.cpp",
+		"/C/Users/Cam/Dropbox/Fall 2015/C++/lectureCode/ArrayInsDel.cpp",
+		"/C/xampp/htdocs/Projects/BikeTime/CreateAccount/createAccount_form_action.php",
+		"/C/xampp/htdocs/Projects/BikeTime/redirect.php",
+		"/C/xampp/htdocs/Projects/BikeTime/CreateGroup/createGroup_form_action.php",
+		"/C/xampp/htdocs/Projects/BikeTime/css/styleSettingsProfile.css",
+		"/C/xampp/htdocs/Projects/BikeTime/css/menustyles.css",
+		"/C/xampp/htdocs/Projects/BikeTime/menu.php",
+		"/C/xampp/htdocs/Projects/BikeTime/js/publicGroupHelper.js",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/account.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/css/styleSettingsProfile.css",
+		"/C/xampp/htdocs/Projects/BikeTime/indexmenu.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/Account/css/styleSettingsAccount.css",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/Account/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/css/styleSettings.css",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/Profile/css/styleSettingsProfile.css",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/Profile/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/css/styleGroup.css",
+		"/C/xampp/htdocs/Projects/BikeTime/CreateRoute/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Group/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/js/routeParser.js",
+		"/C/xampp/htdocs/Projects/BikeTime/CreateRoute/processroute.php",
+		"/C/xampp/htdocs/Projects/BikeTime/css/styleRouteViewer.css",
+		"/C/xampp/htdocs/Projects/BikeTime/CreateGroup/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Ride/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/CreateAccount/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Group/members.php",
+		"/C/xampp/htdocs/Projects/BikeTime/js/materialize.js",
+		"/C/xampp/htdocs/Projects/BikeTime/js/displayRides.js",
+		"/C/xampp/htdocs/Projects/BikeTime/js/ride_Helper.js",
+		"/C/xampp/htdocs/Projects/BikeTime/PlanRide/processride.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/updateAccount_form_action.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/updateProfile_form_action.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Settings/template.php",
+		"/C/xampp/htdocs/Projects/BikeTime/routeviewer/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Ride/test.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Login/login_form_action.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Login/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Group/pending.php",
+		"/C/xampp/htdocs/Projects/BikeTime/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_add_friend.php",
+		"/C/xampp/htdocs/Projects/BikeTime/logout.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_delete_route.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_get_user_groups.php",
+		"/C/xampp/htdocs/Projects/BikeTime/js/groupMemberHelper.js",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_get_route_elevation.php",
+		"/C/xampp/htdocs/Projects/BikeTime/js/d3GraphHelper.js",
+		"/I/Movies/GOOD SSHOWS.txt",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_get_friend_requests.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_friendship_status.php",
+		"/C/xampp/htdocs/Projects/BikeTime/css/stylecreateRoute.css",
+		"/C/Users/Cam/Desktop/Trackers.sql",
+		"/C/Users/Cam/Dropbox/C++/Homework/message.txt.enc",
+		"/C/Users/Cam/Dropbox/C++/lectureCode/FilesIn.cpp",
+		"/C/Users/Cam/Dropbox/C++/Homework/message.txt",
+		"/C/Users/Cam/Dropbox/C++/Homework/message.txt.dec",
+		"/C/Users/Cam/Dropbox/C++/Homework/Crypto.cpp",
+		"/C/Users/Cam/Dropbox/C++/Homework/HW5/DNA.cpp",
+		"/C/Users/Cam/Dropbox/unknownDNA2.txt",
+		"/C/Users/Cam/Dropbox/humanDNA2.txt",
+		"/C/Users/Cam/Dropbox/mouseDNA2.txt",
+		"/G/Garmin/Activities/2015-10-06-14-29-41.fit",
+		"/C/Users/Cam/Desktop/t.html",
+		"/C/Users/Cam/Desktop/t.js",
+		"/C/Users/Cam/Desktop/2015-10-01 - Small CU Team Ride.gpx",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_send_message_ride.php",
+		"/C/xampp/htdocs/Projects/BikeTime/js/materialize.min.js",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_remove_group_member.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Group/join_group_action_form.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax-all-rides.php",
+		"/C/Users/Cam/AppData/Local/Temp/Temp1_timezone_2015f_posix_sql.zip/timezone_2015f_posix_sql/timezone_posix.sql",
+		"/C/Users/Cam/Desktop/mysql-5.6.26-winx64/README",
+		"/C/xampp/htdocs/Projects/BikeTime/Explore/index.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_get_group_message_comments.php",
+		"/C/xampp/htdocs/Projects/BikeTime/readME.txt",
+		"/C/xampp/htdocs/Projects/BikeTime/css/styleindex.css",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_post_group_message_comment.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_send_message_group.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_make_member_admin.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_respond_to_group_member_request.php",
+		"/C/Users/Cam/Dropbox/ElectionResults.py",
+		"/C/Users/Cam/Dropbox/Homework/DNAresults.py",
+		"/C/Users/Cam/Dropbox/client_secret_5908854600-ortffu90m7cpnvb1macbtc32t2qg7kdh.apps.googleusercontent.com.json",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_respond_to_group_request.php",
+		"/C/xampp/htdocs/Projects/BikeTime/ajax/ajax_accept_group_member.php",
+		"/C/xampp/htdocs/Projects/BikeTime/Group/publicGroup.php",
+		"/C/Users/Cam/Dropbox/First.py",
+		"/C/Users/Cam/Dropbox/Lab/Lab3.py",
+		"/C/xampp/htdocs/Projects/BikeTime/Ride/rideNotFound.php",
+		"/C/xampp/htdocs/Projects/BikeTime/routeviewer/RouteNotFound.php",
+		"/C/xampp/htdocs/Projects/BikeTime/routeviewer/privateRoute.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"left",
+			"leftChild",
+			"right",
+			"current",
+			"dataTemp",
+			"#",
+			"rideLevel",
+			"initializeEditRideSelector",
+			"SESSION",
+			"materialize",
+			"src",
+			"$startDate",
+			"rideID",
+			"validateTime",
+			"timepicker",
+			"updateFriendsLis",
+			"url",
+			"../../",
+			"img",
+			"echo",
+			"group",
+			"validate",
+			"jQuery",
+			"rideTime",
+			"$_COOKIE",
+			"updatePro",
+			"$_COOKIE",
+			"$_SESSION",
+			"$_COOKIE",
+			"COOKIE",
+			"header",
+			"COOKIE",
+			"UPDATE",
+			"$mysqli",
+			"$_COOKIE",
+			"setcookie",
+			"deleteRout",
+			"route",
+			"form",
+			"button",
+			"buton",
+			"routeSelected",
+			"showWarnings",
+			"startLocation",
+			"startLoca",
+			"startLocation",
+			"rideDuratio",
+			"time",
+			"routeSelec",
+			"routeID",
+			"time",
+			"getElevationData",
+			"elevation",
+			"routeIncreme",
+			"map",
+			"drawPath",
+			"map",
+			"iketime.googleMaps.m",
+			"biketime.googleMaps.map",
+			"mouseMarker",
+			"map",
+			"mousemar",
+			"mousemarker",
+			"uploadedRoute",
+			"save",
+			"upload",
+			"fileButton",
+			"File",
+			"waypts",
+			"getAscent",
+			"display",
+			"elevationData",
+			"getRouteCoords",
+			"showRoutes",
+			"initializeG",
+			"elevationData",
+			"distArray =",
+			"elevationData",
+			"file",
+			"parseTextAsXml",
+			"elevations",
+			"elevationData",
+			"reduceArray",
+			"drawPath",
+			"climb",
+			"results",
+			"route = ",
+			"route[",
+			"elevationPath",
+			"getRoute",
+			"elevation",
+			"waypts",
+			"uploadRoute",
+			"climb",
+			"getAscent",
+			"getRouteInfo",
+			"getRouteIngo",
+			"getRouteInfo",
+			"elevations",
+			"route = ",
+			"route",
+			"rideLength",
+			"distance",
+			"elevationPath",
+			"drawPath",
+			"$mysql",
+			"getAge",
+			"rout",
+			"getrou",
+			"retrieve",
+			"leavegr",
+			"removeMe",
+			"save",
+			"drawPath",
+			"getAscent",
+			"climb",
+			"getAscent",
+			"elevation",
+			"climb",
+			"rr",
+			"RR",
+			"getUserProfileFromDB",
+			"Users",
+			" Users ",
+			" r.",
+			"r.",
+			"showri",
+			"showR"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "ajax/ajax_update_ride.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1074,
+								1219
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "DatabaseHelper/databaseHelper.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33342,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12219,
+								12225
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 434.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Ride/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22702,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20224,
+								20224
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7443.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/ride_Helper.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8498,
+								8498
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2982.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "PlanRide/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 26993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8650,
+								8657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3593.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "PlanRide/processride.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2978,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2552,
+								2573
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 251.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/Cam/Dropbox/Fall 2015/C++/Lab/GradeCalc.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 896,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								664,
+								664
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 7,
+					"file": "css/styleRide.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2739,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1185,
+								1185
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 589.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.640312499999,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Biketimeproject.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

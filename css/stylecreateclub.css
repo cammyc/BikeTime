@@ -1,0 +1,14 @@
+html {
+	height: 100%; 
+	background: #ECEFF1;
+}
+body { height: 100%; margin: 0; padding: 0 }
+
+#main {
+	position: relative;
+	width: 1200px;
+	height: 600px;
+	margin: auto;
+	top: 50%;
+	margin-top: -300px;
+}

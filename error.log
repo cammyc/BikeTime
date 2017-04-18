@@ -1,0 +1,368 @@
+[Sun Jun 12 20:15:21.624082 2016] [mpm_event:notice] [pid 2792:tid 140587534112640] AH00489: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Sun Jun 12 20:15:21.624157 2016] [core:notice] [pid 2792:tid 140587534112640] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 12 20:15:25.331784 2016] [mpm_event:notice] [pid 2792:tid 140587534112640] AH00491: caught SIGTERM, shutting down
+[Sun Jun 12 20:15:26.400557 2016] [mpm_prefork:notice] [pid 4030] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Sun Jun 12 20:15:26.400654 2016] [core:notice] [pid 4030] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 12 20:15:27.658436 2016] [mpm_prefork:notice] [pid 4030] AH00169: caught SIGTERM, shutting down
+[Sun Jun 12 20:15:28.774554 2016] [mpm_prefork:notice] [pid 4116] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.17 configured -- resuming normal operations
+[Sun Jun 12 20:15:28.774634 2016] [core:notice] [pid 4116] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 12 21:22:12.328424 2016] [:error] [pid 4123] [client 174.116.242.214:5867] PHP Warning:  include(databasehelper/databasehelper.php): failed to open stream: No such file or directory in /var/www/html/test.php on line 3
+[Sun Jun 12 21:22:12.328463 2016] [:error] [pid 4123] [client 174.116.242.214:5867] PHP Warning:  include(): Failed opening 'databasehelper/databasehelper.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/test.php on line 3
+[Sun Jun 12 21:22:12.328473 2016] [:error] [pid 4123] [client 174.116.242.214:5867] PHP Fatal error:  Call to undefined function getdb() in /var/www/html/test.php on line 5
+[Sun Jun 12 21:26:09.861990 2016] [:error] [pid 4119] [client 174.116.242.214:1117] PHP Warning:  include(databasehelper/databasehelper.php): failed to open stream: No such file or directory in /var/www/html/test.php on line 3
+[Sun Jun 12 21:26:09.862025 2016] [:error] [pid 4119] [client 174.116.242.214:1117] PHP Warning:  include(): Failed opening 'databasehelper/databasehelper.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/test.php on line 3
+[Sun Jun 12 21:26:09.862034 2016] [:error] [pid 4119] [client 174.116.242.214:1117] PHP Fatal error:  Call to undefined function getdb() in /var/www/html/test.php on line 5
+[Sun Jun 12 21:29:14.321966 2016] [:error] [pid 4121] [client 174.116.242.214:1151] PHP Warning:  include(databasehelper/databasehelper.php): failed to open stream: No such file or directory in /var/www/html/test.php on line 3
+[Sun Jun 12 21:29:14.322001 2016] [:error] [pid 4121] [client 174.116.242.214:1151] PHP Warning:  include(): Failed opening 'databasehelper/databasehelper.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/test.php on line 3
+[Sun Jun 12 21:29:14.322009 2016] [:error] [pid 4121] [client 174.116.242.214:1151] PHP Fatal error:  Call to undefined function getdb() in /var/www/html/test.php on line 5
+[Sun Jun 12 21:35:11.008627 2016] [:error] [pid 4122] [client 174.116.242.214:1185] PHP Fatal error:  Class 'mysqli' not found in /var/www/html/databasehelper/databasehelper.php on line 145
+[Sun Jun 12 21:37:18.992492 2016] [:error] [pid 4121] [client 174.116.242.214:1231] PHP Fatal error:  Class 'mysqli' not found in /var/www/html/databasehelper/databasehelper.php on line 145
+[Sun Jun 12 21:38:45.395142 2016] [:error] [pid 4122] [client 174.116.242.214:1237] PHP Fatal error:  Class 'mysqli' not found in /var/www/html/test.php on line 4
+[Sun Jun 12 21:39:38.798827 2016] [:error] [pid 4119] [client 174.116.242.214:1261] PHP Fatal error:  Class 'mysqli' not found in /var/www/html/test.php on line 4
+[Sun Jun 12 21:41:15.313252 2016] [:error] [pid 4121] [client 174.116.242.214:1324] PHP Fatal error:  Class 'mysqli' not found in /var/www/html/test.php on line 4
+[Sun Jun 12 21:42:01.524157 2016] [:error] [pid 4123] [client 174.116.242.214:1330] PHP Fatal error:  Call to undefined function mysql_connect() in /var/www/html/test.php on line 4
+[Sun Jun 12 21:42:03.081533 2016] [:error] [pid 4122] [client 174.116.242.214:1331] PHP Fatal error:  Call to undefined function mysql_connect() in /var/www/html/test.php on line 4
+[Sun Jun 12 21:42:55.163269 2016] [:error] [pid 4120] [client 174.116.242.214:1349] PHP Fatal error:  Class 'mysqli' not found in /var/www/html/test.php on line 3
+[Sun Jun 12 21:43:20.011139 2016] [:error] [pid 4138] [client 174.116.242.214:1352] PHP Fatal error:  Class 'mysqli' not found in /var/www/html/test.php on line 3
+[Sun Jun 12 21:54:41.608617 2016] [:error] [pid 4121] [client 174.116.242.214:1691] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 3
+[Sun Jun 12 21:54:42.528670 2016] [:error] [pid 4123] [client 174.116.242.214:1692] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 3
+[Sun Jun 12 21:54:43.069191 2016] [:error] [pid 4122] [client 174.116.242.214:1693] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 3
+[Sun Jun 12 21:54:43.367711 2016] [:error] [pid 4120] [client 174.116.242.214:1694] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 3
+[Sun Jun 12 21:54:43.585207 2016] [:error] [pid 4119] [client 174.116.242.214:1695] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 3
+[Sun Jun 12 21:54:43.809055 2016] [:error] [pid 4138] [client 174.116.242.214:1696] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 3
+[Sun Jun 12 21:54:44.027051 2016] [:error] [pid 4121] [client 174.116.242.214:1697] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 3
+[Sun Jun 12 21:54:44.100734 2016] [:error] [pid 4123] [client 174.116.242.214:1698] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 3
+[Sun Jun 12 21:54:44.261298 2016] [:error] [pid 4122] [client 174.116.242.214:1699] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 3
+[Sun Jun 12 22:04:59.257338 2016] [:error] [pid 4138] [client 174.116.242.214:2170] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 2
+[Sun Jun 12 22:09:34.311187 2016] [:error] [pid 4121] [client 174.116.242.214:2228] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 2
+[Sun Jun 12 22:09:36.049560 2016] [:error] [pid 4123] [client 174.116.242.214:2232] PHP Fatal error:  Call to undefined function mysqli_connect() in /var/www/html/test.php on line 2
+[Sun Jun 12 22:10:01.565993 2016] [mpm_prefork:notice] [pid 4116] AH00169: caught SIGTERM, shutting down
+[Sun Jun 12 22:10:02.632099 2016] [mpm_prefork:notice] [pid 11765] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.17 configured -- resuming normal operations
+[Sun Jun 12 22:10:02.632142 2016] [core:notice] [pid 11765] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 12 22:10:06.753247 2016] [:error] [pid 11771] [client 174.116.242.214:2235] PHP Warning:  mysqli_connect(): MySQL server has gone away in /var/www/html/test.php on line 2
+[Sun Jun 12 22:10:06.753297 2016] [:error] [pid 11771] [client 174.116.242.214:2235] PHP Warning:  mysqli_connect(): Error while reading greeting packet. PID=11771 in /var/www/html/test.php on line 2
+[Sun Jun 12 22:10:06.753310 2016] [:error] [pid 11771] [client 174.116.242.214:2235] PHP Warning:  mysqli_connect(): (HY000/2006): MySQL server has gone away in /var/www/html/test.php on line 2
+[Sun Jun 12 22:10:08.559525 2016] [:error] [pid 11771] [client 174.116.242.214:2235] PHP Warning:  mysqli_connect(): MySQL server has gone away in /var/www/html/test.php on line 2
+[Sun Jun 12 22:10:08.559588 2016] [:error] [pid 11771] [client 174.116.242.214:2235] PHP Warning:  mysqli_connect(): Error while reading greeting packet. PID=11771 in /var/www/html/test.php on line 2
+[Sun Jun 12 22:10:08.559608 2016] [:error] [pid 11771] [client 174.116.242.214:2235] PHP Warning:  mysqli_connect(): (HY000/2006): MySQL server has gone away in /var/www/html/test.php on line 2
+[Sun Jun 12 22:18:31.476747 2016] [:error] [pid 11770] [client 174.116.242.214:2263] PHP Warning:  mysqli::mysqli(): (HY000/2002): Connection timed out in /var/www/html/databasehelper/databasehelper.php on line 145
+[Sun Jun 12 22:18:50.047717 2016] [:error] [pid 11772] [client 174.116.242.214:2271] PHP Warning:  mysqli::mysqli(): MySQL server has gone away in /var/www/html/databasehelper/databasehelper.php on line 145
+[Sun Jun 12 22:18:50.047787 2016] [:error] [pid 11772] [client 174.116.242.214:2271] PHP Warning:  mysqli::mysqli(): Error while reading greeting packet. PID=11772 in /var/www/html/databasehelper/databasehelper.php on line 145
+[Sun Jun 12 22:18:50.047804 2016] [:error] [pid 11772] [client 174.116.242.214:2271] PHP Warning:  mysqli::mysqli(): (HY000/2006): MySQL server has gone away in /var/www/html/databasehelper/databasehelper.php on line 145
+[Sun Jun 12 22:25:03.807879 2016] [:error] [pid 11768] [client 174.116.242.214:2381] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Sun Jun 12 22:25:03.807906 2016] [:error] [pid 11768] [client 174.116.242.214:2381] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Sun Jun 12 22:25:03.807911 2016] [:error] [pid 11768] [client 174.116.242.214:2381] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Sun Jun 12 22:27:08.061819 2016] [:error] [pid 12267] [client 174.116.242.214:2431] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/
+[Sun Jun 12 22:27:08.061843 2016] [:error] [pid 12267] [client 174.116.242.214:2431] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/
+[Sun Jun 12 22:27:20.993576 2016] [:error] [pid 11770] [client 174.116.242.214:2435] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/login/
+[Sun Jun 12 22:27:20.993600 2016] [:error] [pid 11770] [client 174.116.242.214:2435] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/login/
+[Sun Jun 12 22:28:16.578438 2016] [:error] [pid 12308] [client 174.116.242.214:2492] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18, referer: http://fondobike.com/profile/
+[Sun Jun 12 22:28:16.578462 2016] [:error] [pid 12308] [client 174.116.242.214:2492] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18, referer: http://fondobike.com/profile/
+[Sun Jun 12 22:28:16.578467 2016] [:error] [pid 12308] [client 174.116.242.214:2492] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20, referer: http://fondobike.com/profile/
+[Sun Jun 12 22:28:22.648932 2016] [:error] [pid 11771] [client 174.116.242.214:2494] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18, referer: http://fondobike.com/profile/
+[Sun Jun 12 22:28:22.648962 2016] [:error] [pid 11771] [client 174.116.242.214:2494] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18, referer: http://fondobike.com/profile/
+[Sun Jun 12 22:28:22.648967 2016] [:error] [pid 11771] [client 174.116.242.214:2494] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20, referer: http://fondobike.com/profile/
+[Sun Jun 12 22:30:00.234318 2016] [:error] [pid 12330] [client 174.116.242.214:2525] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://fondobike.com/
+[Sun Jun 12 22:30:00.234355 2016] [:error] [pid 12330] [client 174.116.242.214:2525] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://fondobike.com/
+[Sun Jun 12 22:30:00.238028 2016] [:error] [pid 12330] [client 174.116.242.214:2525] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 33, referer: http://fondobike.com/
+[Sun Jun 12 22:30:00.239398 2016] [:error] [pid 12330] [client 174.116.242.214:2525] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 821, referer: http://fondobike.com/
+[Sun Jun 12 22:30:00.397093 2016] [:error] [pid 12330] [client 174.116.242.214:2525] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/
+[Sun Jun 12 22:30:00.397132 2016] [:error] [pid 12330] [client 174.116.242.214:2525] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/
+[Sun Jun 12 22:30:07.948926 2016] [:error] [pid 12328] [client 174.116.242.214:2529] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://fondobike.com/
+[Sun Jun 12 22:30:07.948966 2016] [:error] [pid 12328] [client 174.116.242.214:2529] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://fondobike.com/
+[Sun Jun 12 22:30:07.953022 2016] [:error] [pid 12328] [client 174.116.242.214:2529] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 33, referer: http://fondobike.com/
+[Sun Jun 12 22:30:07.954084 2016] [:error] [pid 12328] [client 174.116.242.214:2529] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 821, referer: http://fondobike.com/
+[Sun Jun 12 22:30:08.032373 2016] [:error] [pid 12328] [client 174.116.242.214:2529] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/
+[Sun Jun 12 22:30:08.032404 2016] [:error] [pid 12328] [client 174.116.242.214:2529] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/
+[Sun Jun 12 22:30:28.055768 2016] [:error] [pid 12347] [client 174.116.242.214:2543] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18, referer: http://fondobike.com/profile/index.php
+[Sun Jun 12 22:30:28.055790 2016] [:error] [pid 12347] [client 174.116.242.214:2543] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18, referer: http://fondobike.com/profile/index.php
+[Sun Jun 12 22:30:28.055795 2016] [:error] [pid 12347] [client 174.116.242.214:2543] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20, referer: http://fondobike.com/profile/index.php
+[Sun Jun 12 22:32:39.405080 2016] [:error] [pid 12268] [client 174.116.242.214:2561] PHP Notice:  Array to string conversion in /var/www/html/ajax/ajax-all-rides.php on line 77, referer: http://fondobike.com/
+[Sun Jun 12 22:34:22.813945 2016] [:error] [pid 12537] [client 174.116.242.214:2613] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/
+[Sun Jun 12 22:34:22.813982 2016] [:error] [pid 12537] [client 174.116.242.214:2613] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/
+[Sun Jun 12 22:35:06.936477 2016] [:error] [pid 12535] [client 174.116.242.214:2621] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/
+[Sun Jun 12 22:35:06.936516 2016] [:error] [pid 12535] [client 174.116.242.214:2621] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://fondobike.com/
+[Sun Jun 12 23:35:04.110717 2016] [:error] [pid 13090] [client 174.116.242.214:24074] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://www.fondobike.com/
+[Sun Jun 12 23:35:04.110742 2016] [:error] [pid 13090] [client 174.116.242.214:24074] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://www.fondobike.com/
+[Mon Jun 13 00:56:47.294983 2016] [:error] [pid 12537] [client 174.116.242.214:37483] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 00:56:47.295007 2016] [:error] [pid 12537] [client 174.116.242.214:37483] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 00:56:47.295012 2016] [:error] [pid 12537] [client 174.116.242.214:37483] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 00:57:02.237912 2016] [:error] [pid 15222] [client 174.116.242.214:37503] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 00:57:02.237943 2016] [:error] [pid 15222] [client 174.116.242.214:37503] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 00:57:02.237948 2016] [:error] [pid 15222] [client 174.116.242.214:37503] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 00:57:10.626436 2016] [:error] [pid 13090] [client 174.116.242.214:37517] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 00:57:10.626455 2016] [:error] [pid 13090] [client 174.116.242.214:37517] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 00:57:10.626460 2016] [:error] [pid 13090] [client 174.116.242.214:37517] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 00:57:35.704097 2016] [:error] [pid 12349] [client 174.116.242.214:37527] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://www.fondobike.com/
+[Mon Jun 13 00:57:35.704126 2016] [:error] [pid 12349] [client 174.116.242.214:37527] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://www.fondobike.com/
+[Mon Jun 13 01:16:20.527572 2016] [:error] [pid 13881] [client 174.116.242.214:37662] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:16:20.527604 2016] [:error] [pid 13881] [client 174.116.242.214:37662] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:16:20.527611 2016] [:error] [pid 13881] [client 174.116.242.214:37662] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 01:32:47.384847 2016] [:error] [pid 15225] [client 174.116.242.214:24219] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:32:47.384875 2016] [:error] [pid 15225] [client 174.116.242.214:24219] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:32:47.384879 2016] [:error] [pid 15225] [client 174.116.242.214:24219] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 01:33:34.930711 2016] [:error] [pid 15818] [client 174.116.242.214:1081] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:33:34.930745 2016] [:error] [pid 15818] [client 174.116.242.214:1081] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:33:34.930749 2016] [:error] [pid 15818] [client 174.116.242.214:1081] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 01:33:42.335027 2016] [:error] [pid 15225] [client 174.116.242.214:1097] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:33:42.335058 2016] [:error] [pid 15225] [client 174.116.242.214:1097] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:33:42.335062 2016] [:error] [pid 15225] [client 174.116.242.214:1097] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 01:34:30.552529 2016] [:error] [pid 12349] [client 174.116.242.214:1121] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:34:30.552563 2016] [:error] [pid 12349] [client 174.116.242.214:1121] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:34:30.552568 2016] [:error] [pid 12349] [client 174.116.242.214:1121] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 01:34:39.628036 2016] [:error] [pid 13010] [client 174.116.242.214:1128] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:34:39.628070 2016] [:error] [pid 13010] [client 174.116.242.214:1128] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:34:39.628075 2016] [:error] [pid 13010] [client 174.116.242.214:1128] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 01:34:46.833143 2016] [:error] [pid 15817] [client 174.116.242.214:1131] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:34:46.833177 2016] [:error] [pid 15817] [client 174.116.242.214:1131] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:34:46.833181 2016] [:error] [pid 15817] [client 174.116.242.214:1131] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 01:34:49.967356 2016] [:error] [pid 15817] [client 174.116.242.214:1131] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://www.fondobike.com/
+[Mon Jun 13 01:34:49.967391 2016] [:error] [pid 15817] [client 174.116.242.214:1131] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://www.fondobike.com/
+[Mon Jun 13 01:35:01.634917 2016] [:error] [pid 12349] [client 174.116.242.214:1144] PHP Notice:  Undefined index: UserID in /var/www/html/databasehelper/databasehelper.php on line 766
+[Mon Jun 13 01:35:01.649256 2016] [:error] [pid 12349] [client 174.116.242.214:1144] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214
+[Mon Jun 13 01:35:01.736658 2016] [:error] [pid 12349] [client 174.116.242.214:1144] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76
+[Mon Jun 13 01:35:01.736670 2016] [:error] [pid 12349] [client 174.116.242.214:1144] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76
+[Mon Jun 13 01:35:12.408382 2016] [:error] [pid 13010] [client 174.116.242.214:1149] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://www.fondobike.com/
+[Mon Jun 13 01:35:12.408424 2016] [:error] [pid 13010] [client 174.116.242.214:1149] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://www.fondobike.com/
+[Mon Jun 13 01:37:49.677624 2016] [:error] [pid 13090] [client 174.116.242.214:1192] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:37:49.677653 2016] [:error] [pid 13090] [client 174.116.242.214:1192] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:37:49.677657 2016] [:error] [pid 13090] [client 174.116.242.214:1192] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 01:57:22.044105 2016] [:error] [pid 15820] [client 120.132.50.135:52407] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:57:22.044131 2016] [:error] [pid 15820] [client 120.132.50.135:52407] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 01:57:22.044136 2016] [:error] [pid 15820] [client 120.132.50.135:52407] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 02:20:51.794211 2016] [:error] [pid 15225] [client 174.116.242.214:1338] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 02:20:51.794231 2016] [:error] [pid 15225] [client 174.116.242.214:1338] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 02:20:51.794236 2016] [:error] [pid 15225] [client 174.116.242.214:1338] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 02:23:26.656662 2016] [:error] [pid 13090] [client 174.116.242.214:1439] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 02:23:26.656695 2016] [:error] [pid 13090] [client 174.116.242.214:1439] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 02:23:26.656700 2016] [:error] [pid 13090] [client 174.116.242.214:1439] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 02:29:01.621837 2016] [:error] [pid 13010] [client 208.54.86.170:20260] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 02:29:01.621864 2016] [:error] [pid 13010] [client 208.54.86.170:20260] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 02:29:01.621871 2016] [:error] [pid 13010] [client 208.54.86.170:20260] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 03:03:44.088964 2016] [:error] [pid 12537] [client 174.116.242.214:38824] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:03:44.088988 2016] [:error] [pid 12537] [client 174.116.242.214:38824] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:03:44.088993 2016] [:error] [pid 12537] [client 174.116.242.214:38824] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 03:03:50.803580 2016] [:error] [pid 13010] [client 174.116.242.214:38840] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:03:50.803599 2016] [:error] [pid 13010] [client 174.116.242.214:38840] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:03:50.803604 2016] [:error] [pid 13010] [client 174.116.242.214:38840] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 03:04:22.404579 2016] [:error] [pid 16742] [client 174.116.242.214:38844] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:04:22.404623 2016] [:error] [pid 16742] [client 174.116.242.214:38844] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:04:22.404628 2016] [:error] [pid 16742] [client 174.116.242.214:38844] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 03:09:40.156486 2016] [:error] [pid 13010] [client 174.116.242.214:38922] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:40.156509 2016] [:error] [pid 13010] [client 174.116.242.214:38922] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:40.156513 2016] [:error] [pid 13010] [client 174.116.242.214:38922] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 03:09:41.578527 2016] [:error] [pid 13010] [client 174.116.242.214:38922] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:41.578556 2016] [:error] [pid 13010] [client 174.116.242.214:38922] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:41.578561 2016] [:error] [pid 13010] [client 174.116.242.214:38922] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 03:09:44.465496 2016] [:error] [pid 15818] [client 174.116.242.214:38941] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:44.465517 2016] [:error] [pid 15818] [client 174.116.242.214:38941] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:44.465521 2016] [:error] [pid 15818] [client 174.116.242.214:38941] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 03:09:46.611228 2016] [:error] [pid 15818] [client 174.116.242.214:38941] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:46.611258 2016] [:error] [pid 15818] [client 174.116.242.214:38941] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:46.611263 2016] [:error] [pid 15818] [client 174.116.242.214:38941] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 03:09:52.006245 2016] [:error] [pid 15818] [client 174.116.242.214:38941] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:52.006285 2016] [:error] [pid 15818] [client 174.116.242.214:38941] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:52.006290 2016] [:error] [pid 15818] [client 174.116.242.214:38941] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 03:09:58.907240 2016] [:error] [pid 12537] [client 174.116.242.214:38956] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:58.907269 2016] [:error] [pid 12537] [client 174.116.242.214:38956] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 03:09:58.907273 2016] [:error] [pid 12537] [client 174.116.242.214:38956] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 03:10:34.799111 2016] [:error] [pid 12349] [client 174.116.242.214:38973] PHP Notice:  Undefined index: UserID in /var/www/html/group/index.php on line 16, referer: http://www.fondobike.com/
+[Mon Jun 13 03:10:34.801803 2016] [:error] [pid 12349] [client 174.116.242.214:38973] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/
+[Mon Jun 13 03:10:34.988326 2016] [:error] [pid 12349] [client 174.116.242.214:38973] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76, referer: http://www.fondobike.com/
+[Mon Jun 13 03:10:34.988356 2016] [:error] [pid 12349] [client 174.116.242.214:38973] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76, referer: http://www.fondobike.com/
+[Mon Jun 13 05:01:20.829346 2016] [:error] [pid 13010] [client 66.249.66.139:50001] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 05:01:20.829379 2016] [:error] [pid 13010] [client 66.249.66.139:50001] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 05:01:20.829385 2016] [:error] [pid 13010] [client 66.249.66.139:50001] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 05:26:58.548532 2016] [:error] [pid 12537] [client 187.160.21.240:33274] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 05:26:58.548555 2016] [:error] [pid 12537] [client 187.160.21.240:33274] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 05:26:58.548560 2016] [:error] [pid 12537] [client 187.160.21.240:33274] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 08:06:38.434195 2016] [:error] [pid 15852] [client 123.249.29.201:2142] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 08:06:38.434234 2016] [:error] [pid 15852] [client 123.249.29.201:2142] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 08:06:38.434238 2016] [:error] [pid 15852] [client 123.249.29.201:2142] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 08:06:40.234426 2016] [:error] [pid 13881] [client 123.249.29.201:2212] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 08:06:40.234456 2016] [:error] [pid 13881] [client 123.249.29.201:2212] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 08:06:40.234460 2016] [:error] [pid 13881] [client 123.249.29.201:2212] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 08:06:42.182194 2016] [:error] [pid 13010] [client 123.249.29.201:2236] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 08:06:42.182214 2016] [:error] [pid 13010] [client 123.249.29.201:2236] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 08:06:42.182218 2016] [:error] [pid 13010] [client 123.249.29.201:2236] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 08:11:55.858774 2016] [:error] [pid 16742] [client 217.12.204.104:35665] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18, referer: http://burger-imperia.com/
+[Mon Jun 13 08:11:55.858796 2016] [:error] [pid 16742] [client 217.12.204.104:35665] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18, referer: http://burger-imperia.com/
+[Mon Jun 13 08:11:55.858800 2016] [:error] [pid 16742] [client 217.12.204.104:35665] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20, referer: http://burger-imperia.com/
+[Mon Jun 13 10:13:45.303946 2016] [:error] [pid 12537] [client 66.249.66.135:58203] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76
+[Mon Jun 13 10:13:45.303976 2016] [:error] [pid 12537] [client 66.249.66.135:58203] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76
+[Mon Jun 13 10:18:54.220587 2016] [:error] [pid 12349] [client 123.249.29.201:37053] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 10:18:54.220608 2016] [:error] [pid 12349] [client 123.249.29.201:37053] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 10:18:54.220613 2016] [:error] [pid 12349] [client 123.249.29.201:37053] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 10:18:55.102909 2016] [:error] [pid 17296] [client 123.249.29.201:37067] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 10:18:55.102949 2016] [:error] [pid 17296] [client 123.249.29.201:37067] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 10:18:55.102954 2016] [:error] [pid 17296] [client 123.249.29.201:37067] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 10:18:55.735675 2016] [:error] [pid 15852] [client 123.249.29.201:37104] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 10:18:55.735694 2016] [:error] [pid 15852] [client 123.249.29.201:37104] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 10:18:55.735698 2016] [:error] [pid 15852] [client 123.249.29.201:37104] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 11:31:18.812665 2016] [:error] [pid 15818] [client 169.229.3.91:40711] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 11:31:18.812710 2016] [:error] [pid 15818] [client 169.229.3.91:40711] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 11:31:18.812714 2016] [:error] [pid 15818] [client 169.229.3.91:40711] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 14:41:08.403100 2016] [:error] [pid 16614] [client 174.116.242.214:2169] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:41:08.403130 2016] [:error] [pid 16614] [client 174.116.242.214:2169] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:41:08.403135 2016] [:error] [pid 16614] [client 174.116.242.214:2169] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 14:43:08.178427 2016] [authz_core:error] [pid 29352] [client 174.116.242.214:2196] AH01630: client denied by server configuration: /var/www/html/.htaccess
+[Mon Jun 13 14:43:11.983974 2016] [:error] [pid 29352] [client 174.116.242.214:2196] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:43:11.984007 2016] [:error] [pid 29352] [client 174.116.242.214:2196] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:43:11.984013 2016] [:error] [pid 29352] [client 174.116.242.214:2196] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 14:43:19.037942 2016] [:error] [pid 13010] [client 174.116.242.214:2204] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:43:19.037970 2016] [:error] [pid 13010] [client 174.116.242.214:2204] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:43:19.037974 2016] [:error] [pid 13010] [client 174.116.242.214:2204] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 14:43:23.714648 2016] [:error] [pid 13881] [client 174.116.242.214:2207] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:43:23.714667 2016] [:error] [pid 13881] [client 174.116.242.214:2207] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:43:23.714683 2016] [:error] [pid 13881] [client 174.116.242.214:2207] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 14:44:34.189994 2016] [:error] [pid 29387] [client 174.116.242.214:2234] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:44:34.190031 2016] [:error] [pid 29387] [client 174.116.242.214:2234] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:44:34.190039 2016] [:error] [pid 29387] [client 174.116.242.214:2234] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 14:44:44.426620 2016] [:error] [pid 13010] [client 174.116.242.214:2235] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:44:44.426646 2016] [:error] [pid 13010] [client 174.116.242.214:2235] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:44:44.426651 2016] [:error] [pid 13010] [client 174.116.242.214:2235] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 14:50:58.717536 2016] [:error] [pid 15820] [client 174.116.242.214:2447] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:50:58.717584 2016] [:error] [pid 15820] [client 174.116.242.214:2447] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Mon Jun 13 14:50:58.717589 2016] [:error] [pid 15820] [client 174.116.242.214:2447] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Mon Jun 13 19:55:29.653339 2016] [:error] [pid 17296] [client 66.249.66.187:35292] PHP Warning:  include(loginMenu/index.php): failed to open stream: No such file or directory in /var/www/html/login/index.php on line 76
+[Mon Jun 13 19:55:29.653370 2016] [:error] [pid 17296] [client 66.249.66.187:35292] PHP Warning:  include(): Failed opening 'loginMenu/index.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/html/login/index.php on line 76
+[Mon Jun 13 21:46:59.976581 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:46:59.976607 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:46:59.977686 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:46:59.978881 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:00.445466 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:00.445490 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:00.446582 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:00.447551 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:00.813433 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:00.813479 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:00.814696 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:00.815922 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.004575 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.004603 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.005888 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.007122 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.172162 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.172194 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.173245 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.174208 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.365795 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.365820 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.366932 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.368015 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.566705 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.566730 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.567870 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.569043 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.732487 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.732535 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.733535 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.734644 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.917969 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.918000 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.919183 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:01.920308 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.081048 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.081074 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.082169 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.083204 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.256350 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.256388 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.257433 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.258473 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.987910 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.987948 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.989328 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:02.990428 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.325900 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.325926 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.327166 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.328225 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.617184 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.617208 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.618356 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.619510 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.929630 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.929658 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.930716 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:03.931798 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.220042 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.220065 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.221135 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.222256 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.534830 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.534857 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.536133 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.537393 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.834624 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 9, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.834650 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Undefined index: UserID in /var/www/html/profile/index.php on line 21, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.835761 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Notice:  Trying to get property of non-object in /var/www/html/databasehelper/databasehelper.php on line 775, referer: http://www.fondobike.com/login/
+[Mon Jun 13 21:47:04.836884 2016] [:error] [pid 13881] [client 172.56.6.55:19586] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214, referer: http://www.fondobike.com/login/
+[Tue Jun 14 02:45:07.139030 2016] [:error] [pid 12349] [client 66.249.66.184:43240] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 02:45:07.139050 2016] [:error] [pid 12349] [client 66.249.66.184:43240] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 02:45:07.139054 2016] [:error] [pid 12349] [client 66.249.66.184:43240] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 08:06:06.252452 2016] [:error] [pid 12537] [client 123.249.29.201:24119] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 08:06:06.252506 2016] [:error] [pid 12537] [client 123.249.29.201:24119] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 08:06:06.252511 2016] [:error] [pid 12537] [client 123.249.29.201:24119] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 08:06:07.102511 2016] [:error] [pid 15852] [client 123.249.29.201:24157] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 08:06:07.102548 2016] [:error] [pid 15852] [client 123.249.29.201:24157] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 08:06:07.102554 2016] [:error] [pid 15852] [client 123.249.29.201:24157] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 08:06:08.946048 2016] [:error] [pid 16614] [client 123.249.29.201:24184] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 08:06:08.946067 2016] [:error] [pid 16614] [client 123.249.29.201:24184] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 08:06:08.946072 2016] [:error] [pid 16614] [client 123.249.29.201:24184] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 09:52:04.177734 2016] [:error] [pid 17296] [client 164.132.106.193:44246] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18, referer: http://burger-imperia.com/
+[Tue Jun 14 09:52:04.177781 2016] [:error] [pid 17296] [client 164.132.106.193:44246] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18, referer: http://burger-imperia.com/
+[Tue Jun 14 09:52:04.177787 2016] [:error] [pid 17296] [client 164.132.106.193:44246] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20, referer: http://burger-imperia.com/
+[Tue Jun 14 11:31:16.855950 2016] [:error] [pid 13881] [client 66.249.69.213:40525] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 11:31:16.855971 2016] [:error] [pid 13881] [client 66.249.69.213:40525] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 11:31:16.855976 2016] [:error] [pid 13881] [client 66.249.69.213:40525] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 11:41:16.912592 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Notice:  Undefined index: startDate in /var/www/html/ajax/ajax-all-rides.php on line 8
+[Tue Jun 14 11:41:16.912706 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Notice:  Undefined index: endDate in /var/www/html/ajax/ajax-all-rides.php on line 9
+[Tue Jun 14 11:41:16.912717 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Notice:  Undefined index: rideType in /var/www/html/ajax/ajax-all-rides.php on line 10
+[Tue Jun 14 11:41:16.912722 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Notice:  Undefined index: startTime in /var/www/html/ajax/ajax-all-rides.php on line 11
+[Tue Jun 14 11:41:16.912728 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Notice:  Undefined index: endTime in /var/www/html/ajax/ajax-all-rides.php on line 12
+[Tue Jun 14 11:41:16.912734 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Notice:  Undefined index: level in /var/www/html/ajax/ajax-all-rides.php on line 13
+[Tue Jun 14 11:41:16.912739 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Notice:  Undefined index: userID in /var/www/html/ajax/ajax-all-rides.php on line 14
+[Tue Jun 14 11:41:16.912744 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Notice:  Undefined index: groupRides in /var/www/html/ajax/ajax-all-rides.php on line 15
+[Tue Jun 14 11:41:16.912749 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Notice:  Undefined index: friendRides in /var/www/html/ajax/ajax-all-rides.php on line 16
+[Tue Jun 14 11:41:16.912754 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Notice:  Undefined index: timezone in /var/www/html/ajax/ajax-all-rides.php on line 17
+[Tue Jun 14 11:41:16.914288 2016] [:error] [pid 29386] [client 66.249.75.204:40550] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /var/www/html/databasehelper/databasehelper.php on line 214
+[Tue Jun 14 11:43:37.268594 2016] [:error] [pid 12349] [client 66.249.75.212:33570] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 11:43:37.268638 2016] [:error] [pid 12349] [client 66.249.75.212:33570] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 11:43:37.268644 2016] [:error] [pid 12349] [client 66.249.75.212:33570] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 11:50:09.872348 2016] [:error] [pid 13010] [client 66.249.75.212:44198] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 11:50:09.872370 2016] [:error] [pid 13010] [client 66.249.75.212:44198] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 11:50:09.872379 2016] [:error] [pid 13010] [client 66.249.75.212:44198] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 13:43:37.765923 2016] [:error] [pid 15820] [client 66.249.66.187:58693] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 13:43:37.765964 2016] [:error] [pid 15820] [client 66.249.66.187:58693] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 13:43:37.765970 2016] [:error] [pid 15820] [client 66.249.66.187:58693] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 15:44:07.633747 2016] [:error] [pid 12537] [client 99.227.64.53:5547] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 15:44:07.633769 2016] [:error] [pid 12537] [client 99.227.64.53:5547] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 15:44:07.633812 2016] [:error] [pid 12537] [client 99.227.64.53:5547] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 15:44:23.192300 2016] [:error] [pid 22619] [client 99.227.64.53:5565] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 15:44:23.192323 2016] [:error] [pid 22619] [client 99.227.64.53:5565] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 15:44:23.192330 2016] [:error] [pid 22619] [client 99.227.64.53:5565] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 16:05:16.691517 2016] [:error] [pid 15852] [client 99.227.64.53:5903] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 16:05:16.691564 2016] [:error] [pid 15852] [client 99.227.64.53:5903] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 16:05:16.691572 2016] [:error] [pid 15852] [client 99.227.64.53:5903] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 16:05:28.063353 2016] [:error] [pid 12349] [client 99.227.64.53:5912] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 16:05:28.063393 2016] [:error] [pid 12349] [client 99.227.64.53:5912] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 16:05:28.063402 2016] [:error] [pid 12349] [client 99.227.64.53:5912] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 16:06:10.962164 2016] [:error] [pid 13881] [client 99.227.64.53:5917] PHP Notice:  Undefined variable: menuProfile in /var/www/html/menu.php on line 18
+[Tue Jun 14 16:06:10.962193 2016] [:error] [pid 13881] [client 99.227.64.53:5917] PHP Notice:  Trying to get property of non-object in /var/www/html/menu.php on line 18
+[Tue Jun 14 16:06:10.962198 2016] [:error] [pid 13881] [client 99.227.64.53:5917] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/menu.php on line 20
+[Tue Jun 14 16:06:51.044638 2016] [mpm_prefork:notice] [pid 11765] AH00169: caught SIGTERM, shutting down
+[Tue Jun 14 16:06:52.090615 2016] [mpm_prefork:notice] [pid 23228] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.17 configured -- resuming normal operations
+[Tue Jun 14 16:06:52.090656 2016] [core:notice] [pid 23228] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jun 14 16:06:57.549657 2016] [core:alert] [pid 23234] [client 99.227.64.53:5925] /var/www/html/.htaccess: ServerTokens not allowed here
+[Tue Jun 14 16:08:07.981441 2016] [mpm_prefork:notice] [pid 23228] AH00169: caught SIGTERM, shutting down
+[Tue Jun 14 16:08:09.044707 2016] [mpm_prefork:notice] [pid 23306] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.17 configured -- resuming normal operations
+[Tue Jun 14 16:08:09.044748 2016] [core:notice] [pid 23306] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jun 14 16:08:17.852141 2016] [core:alert] [pid 23313] [client 99.227.64.53:6105] /var/www/html/.htaccess: ServerTokens not allowed here
+[Tue Jun 14 16:08:19.038927 2016] [core:alert] [pid 23311] [client 99.227.64.53:6106] /var/www/html/.htaccess: ServerTokens not allowed here
+[Tue Jun 14 16:12:49.591504 2016] [authz_core:error] [pid 23312] [client 66.249.66.184:64355] AH01630: client denied by server configuration: /var/www, referer: http://fondobike.com/
+[Tue Jun 14 16:18:01.700448 2016] [mpm_prefork:notice] [pid 23306] AH00169: caught SIGTERM, shutting down
+[Tue Jun 14 16:18:02.758214 2016] [mpm_prefork:notice] [pid 23643] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.17 configured -- resuming normal operations
+[Tue Jun 14 16:18:02.758268 2016] [core:notice] [pid 23643] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jun 14 16:18:09.672806 2016] [core:alert] [pid 23649] [client 99.227.64.53:6427] /var/www/html/.htaccess: Invalid command 'Header', perhaps misspelled or defined by a module not included in the server configuration
+[Tue Jun 14 16:18:11.819242 2016] [core:alert] [pid 23648] [client 99.227.64.53:6429] /var/www/html/.htaccess: Invalid command 'Header', perhaps misspelled or defined by a module not included in the server configuration

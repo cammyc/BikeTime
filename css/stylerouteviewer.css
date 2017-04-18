@@ -1,0 +1,72 @@
+#map-canvas{
+   position: absolute;
+   width: 100%;
+   top: 64px;
+   bottom: 0px;
+   z-index: 0;
+}
+
+.infoContainer{
+   height: auto;
+   width: 95%;
+   position: absolute;
+    z-index: 2;
+   background: rgba(255,255,255,.8);
+   margin: auto;
+   left: 0; bottom: 25px; right: 0;
+   -moz-box-shadow: 4px 4px 4px #7f8c8d;
+   -webkit-box-shadow: 4px 4px 4px #7f8c8d;
+   box-shadow: 2px 2px 5px #7f8c8d;
+   overflow: hidden;
+}
+
+#deleteRoute{
+  left: 120px;
+  top: 64px;
+  position: absolute;
+}
+
+#bDeleteRoute{
+}
+
+#routeInfo{
+   width: 100%; 
+}
+
+#routeInfo table{
+   width: 100%;
+   position: relative;
+   text-align: center;
+}
+
+#routeInfo table td{
+   width: 33.33%; 
+   text-align: center;
+}
+
+#elevationGraph{
+   position: relative;
+   width: 100%;
+   height: 120px;
+}
+
+#wrapper{
+   width: 100%;
+}
+
+p2{
+font-family: 'Lato', sans-serif;
+font-size: 18pt;
+}
+
+p1{
+font-family: 'Lato', sans-serif;
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+}
+

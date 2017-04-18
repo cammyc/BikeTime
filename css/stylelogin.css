@@ -1,0 +1,106 @@
+ 
+html { 
+  background: url(../images/group.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body { height: 100%; margin: 0; padding: 0 }
+
+#loginBox {
+  width: 600px;
+  height: auto;
+  max-height: 500px;
+  background: rgba(0, 0, 0,0.6);
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -250px;
+  position: absolute;
+  padding-bottom: 10px;
+}
+
+#loginTitle{
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0,0.6);
+  position: absolute;
+}
+
+#loginTitle h1{
+  margin: 5px 0px 0px 15px;
+  color: #FFFFFF;
+  font-size: 25pt;
+  font-weight: 300;
+  vertical-align: middle;
+
+}
+
+#loginButton{
+  margin: 120px 0px 0px 25px;
+  position: relative;
+}
+
+#fbButton{
+  background-color: #3b5998;
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+
+#fbButton:hover{
+  background-color: #2f4779;
+}
+
+#orWith{
+  color: #FFF;
+  font-size: 15pt;
+}
+
+#inputFields{
+  position: relative;
+  margin-top: 30px;
+  width: 500px;
+  height: auto;
+  left: 25px;
+}
+
+.inputText{
+  font-size: 14px;
+  min-height: 32px;
+  padding: 8px 10px;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  width: 260px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid #666;
+  color: #ccc;
+  margin: 6px 0;
+}
+
+/*.inputText:focus{
+  background-color: rgba(255,255,255,0.5);
+  box-shadow: 0 0 5px #FFF;
+  color: #333;
+}*/
+
+
+#forgetPW {
+  position: relative;
+  text-decoration: none;
+  color: #CCC;
+  font-size: 10pt;
+}
+
+#forgetPW:hover{
+  text-decoration: underline;
+}
+
+#invalid {
+  position: relative;
+  color: #FF0000;
+}

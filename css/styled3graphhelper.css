@@ -1,0 +1,56 @@
+ .line {
+          stroke: rgba(52, 152, 219,1.0);
+          stroke-width: 2px;
+          fill: none;
+      }
+
+      svg { 
+        pointer-events: all;
+      }
+      
+      .axis {
+        font-size: 8pt;
+        color: #CCC;
+        shape-rendering: crispEdges;
+      }
+
+      .axis path{
+        fill: none;
+        stroke: #AAA;
+      }
+
+      .tick text{
+        fill: #999;
+        line-height: 1.5em;
+      }
+
+      .axis line{
+        stroke: #EEE;
+      }
+
+      .area {
+        fill:#000; opacity:0.10
+      }
+
+      .hover-line { 
+        stroke: #000;  
+        fill: none;
+        stroke-width: 1px;
+      }
+
+      .hover-square { 
+        width: 20px;
+        height: 20px;
+        fill: rgba(255,255,255,0.9);
+        stroke-width: 1px;
+        stroke: #CCC;
+      }
+
+      text{
+        fill: #333;
+      }
+
+      .hover-square text{
+        fill: #333;
+        stroke-width: 0;
+      }

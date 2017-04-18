@@ -1,0 +1,30 @@
+.nav-wrapper{
+  background: #FFF;
+}
+
+.nav-wrapper a{
+  color: #333;
+}
+
+.nav-wrapper a:hover{
+  color: #3498db;
+}
+
+#profImageContainer{
+	position: relative;
+	width: 45px;
+	height: 45px;
+  	vertical-align: middle;
+  	margin-right: 5px;
+	overflow: hidden;
+	display: inline-block;
+  	border-radius: 50%;
+
+}
+
+#profImage{
+  position: absolute;
+  max-width: 45px;
+  width: auto;
+  height: auto;
+}
