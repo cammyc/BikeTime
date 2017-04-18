@@ -9,7 +9,11 @@
 	$endDate = mysql_escape_string($_GET['endDate']);
 	$rideType = mysql_escape_string($_GET['rideType']);
 	$startingAfter = mysql_escape_string($_GET['startTime']);
+
 	$startingBefore = mysql_escape_string($_GET['endTime']);
+	$startingBefore = ($startingBefore != "Not Sure") ? $startingBefore : '24:00:00';
+
+
 	$level = mysql_escape_string($_GET['level']);
 	$userID = mysql_escape_string($_GET['userID']);
 	$groupRides = mysql_escape_string($_GET['groupRides']);
@@ -31,60 +35,83 @@
 		}
 	}
 
-	$timezone = $userID != -1 ? getUserProfileFromDB($mysqli,$userID)->timezone : $timezone;
+	//**********Time Range*******
+
+	$timezone = ($userID != -1) ? getUserProfileFromDB($mysqli,$userID)->timezone : $timezone;
 
 	$timeColumn = "DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, '".$timezone."'),'%H:%i:%s')";
-	
-	$startTimeAdjust = "UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_start, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), rides.startTime), '%Y-%m-%d %T'), rides.tzName, '".$timezone."'), '%y-%m-%d'),'UTC',@@session.time_zone))";
-	$endTimeAdjust = "UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_end, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), IFNULL(rides.endTime,'')), '%Y-%m-%d %T'), rides.tzName, '".$timezone."'), '%y-%m-%d'),'UTC',@@session.time_zone))";
+	$range = "BETWEEN ? AND ?";
 
-	$range = "";
+	$timeRangeQuery = " AND (".$timeColumn." ".$range." )";
 
-	if($startingBefore != "Not Sure"){
+	//****************Time Range End ********
 
-			$range = "BETWEEN '".$startingAfter."' AND '".$startingBefore."'";
-		             
+
+	//********friends,groups,public,type,level options - NON TIME RELATED OPTIONS **********
+
+	if($showFriends && $userID != -1){
+		$friends = getFriendIDs($mysqli, $userID);
+		$friendRidesQuery = '(CreatorType = 0 AND ('.implode(" OR ", $friends).'))';
+	}
+
+	$and = "";
+
+	if($userID != -1){
+			$and = (!$publicRides && empty($groupRides) && empty($friendRides)) ? '' : "AND";
 	}else{
-			$range = "BETWEEN '".$startingAfter."' AND '24:00:00'";
+		$and = "AND";
 	}
 
 
+	$showANDOR = (!empty($groupRides) || $showFriends) ? "OR " : "";
+	$showPublic = ($publicRides) ? " ".$showANDOR."Visibility = 2 " : "";
+
+	$groupFriendOrPublic =  ($userID != -1) ? '('.$friendRidesQuery.$groupRidesQuery.$showPublic.')' : " Visibility = 2 "; //public rides (visibility = 2) don't show - safe from injection
+
+	$query = 'WHERE ('.$groupFriendOrPublic.''.addParam('RideType', $rideType ,$and).''.addParam('Level', $level,'AND').''.$timeRangeQuery.') '; //fix empty ()
+
+	//need to have same number on bindParams this will allow value to be passed on
+	$rideType = ($rideType == "-1") ? "0" : $rideType;  //ride type is int type so 0 = false
+	$level = ($level == "-1") ? "false" : $level; //level is string so use false
+
+
+	//*************END NON TIME RELATED OPTIONS **************
+
 	date_default_timezone_set('UTC');
 
-	$startDate = strtotime($startDate);
+	$startDate = strtotime($startDate); //dont need to escape because will be false if invalid string
 	$endDate = strtotime($endDate);
 
-	$days = array();
+	$query .= ' AND ((rr.repeat_start >= '.$startDate.' AND rr.repeat_end = 0) OR (getStartDate(rr.repeat_start,'.$startDate.', rr.repeat_interval) <= '.$endDate.' AND rr.repeat_interval > 0)) ORDER BY realStartDate ASC, startTimeAdjust ASC'; //realStartDate is defined in the query from the function getUserRidesWithDateRangeFromDB( in databasehelper.php
+
+
+	$rides = getUserRidesWithDateRangeFromDB($mysqli,$query,$timezone, $startDate, $endDate, $startingAfter, $startingBefore, $rideType, $level);
+	
+	echo json_encode($rides);
+	
+	// echo $query;
+	$mysqli->close();
+
 
 	function addParam($column,$param, $and){
 
-		if ($param == '-1') {
-			$param = null;
+		if ($param == '-1') {//EX: is ride type is any it would be -1
+			return " ".$and." ISNULL(".$column.") = ?"; //wont be null, so will select as long as there is a value
 		}
 
 		if($param != null){
-			return " ".$and." ".$column." = '".$param."'";
+			return " ".$and." ".$column." = ?";
 		}
 
 		return "";
 	}
 
-	if($showFriends){
-		$friends = getFriendIDs($mysqli, $userID);
-		$friendRidesQuery = '(CreatorType = 0 AND ('.implode(" OR ", $friends).'))';
-	}
 
-	$and = ($publicRides || (empty($groupRides) && empty($friendRides))) ? '' : "AND";
+	// $startTimeAdjust = "UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_start, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), rides.startTime), '%Y-%m-%d %T'), rides.tzName, '".$timezone."'), '%y-%m-%d'),'UTC',@@session.time_zone))";
+	// $endTimeAdjust = "UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_end, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), IFNULL(rides.endTime,'')), '%Y-%m-%d %T'), rides.tzName, '".$timezone."'), '%y-%m-%d'),'UTC',@@session.time_zone))";
 
-	$timeRangeQuery = " AND (".$timeColumn." ".$range." )";
-
-	$showANDOR = (!empty($groupRides) || $showFriends) ? "OR " : "";
-	$showPublic = ($publicRides) ? " ".$showANDOR."Visibility = 2 " : "";
-
-
-	$groupFriendOrPublic =  '('.$friendRidesQuery.$groupRidesQuery.$showPublic.')'; //public rides (visibility = 2) don't show
-
-	$query = 'WHERE ((CreatorType = 0 OR CreatorType = 1)'.addParam('RideType',$rideType,"AND").''.addParam('Level',$level,'AND').''.$timeRangeQuery.') '; //fix empty ()
+	
+	// $days = array();
 
 	// while($endDate >= $startDate){
 	// 	$days[] = ' ('.$startTimeAdjust.' = '.$startDate.' OR ((( '.$startDate.' - '.$startTimeAdjust.' ) % rr.repeat_interval = 0 )
@@ -94,13 +121,4 @@
 
 	// $query .= ' AND ('.implode(" OR ", $days).') ORDER BY startDateAdjust ASC, dayOfWeek ASC';
 	//shows own users rides
-
-	$query .= ' AND ((rr.repeat_start >= '.$startDate.' AND rr.repeat_end = 0) OR (getStartDate(rr.repeat_start,'.$startDate.', rr.repeat_interval) <= '.$endDate.' AND rr.repeat_interval > 0)) ORDER BY realStartDate ASC, startTimeAdjust ASC';
-
-
-	$rides = getUserRidesWithDateRangeFromDB($mysqli,$query,$timezone, $startDate, $endDate);
-	
-	echo json_encode($rides);
-	//echo $query;
-	$mysqli->close();
 ?>

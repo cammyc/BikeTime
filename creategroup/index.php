@@ -22,7 +22,7 @@
 	<h3 id="header" style="color:#333"> Create a Group</h3>
 
 		<div class="row card">
-			<form name = "clubInfoForm" action="creategroup_form_action.php" id="form" method="POST" class="col s12">
+			<form name = "clubInfoForm" action="createGroup_form_action.php" id="form" method="POST" class="col s12">
 				<div class="row">
 					<div class="input-field col s4">
 						<input type="text" name="name" id="name"/>

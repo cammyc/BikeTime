@@ -148,8 +148,18 @@ function getDB(){//replace all other uses so that when site goes live I only hav
 
 function getGroupFromDB($mysqli,$groupID){
     $g = new group();
-      $result = $mysqli->query("SELECT * FROM groups WHERE groups.ID = ".$groupID."");
-      while($row = $result->fetch_row()){
+
+      $query = "SELECT ID, Name, Description, Website, Private, Type, Sport, LogoURL, City FROM groups WHERE groups.ID = ?";
+
+
+      $statement = $mysqli->prepare($query);
+
+      $statement->bind_param("i", $groupID);
+      $statement->execute();
+      $result = $statement->get_result();
+
+      $row = $result->fetch_array(MYSQLI_NUM);
+
         $g->groupID = $row[0];
         $g->name = $row[1];
         $g->description = $row[2];
@@ -163,15 +173,22 @@ function getGroupFromDB($mysqli,$groupID){
         $g->pendingMembers = getGroupMembers($mysqli,$groupID,0);
         $g->groupMessages = getGroupMessages($mysqli,$groupID);
 
-      }
+      
       return $g;
 }
 
-function getMultipleGroups($mysqli,$query){
-  $groups = array();
-      $result = $mysqli->query($query);
-      $i = 0;
-      while($row = $result->fetch_row()){
+function getMultipleGroups($mysqli){
+
+   $query = "SELECT ID, Name, Description, Website, Private, Type, Sport, LogoURL, City FROM groups";
+
+
+    $statement = $mysqli->prepare($query);
+    $statement->execute();
+    $result = $statement->get_result();
+
+    $groups = array();
+    $i = 0;
+      while($row = $result->fetch_array(MYSQLI_NUM)){
         $g = new group();
           $g->groupID = $row[0];
           $g->name = $row[1];
@@ -189,19 +206,27 @@ function getMultipleGroups($mysqli,$query){
 }
 
 function creategroup($mysqli,$name,$description,$website,$private,$type,$sport,$photo_url,$city){
-  $result = $mysqli->query('INSERT INTO `groups` VALUES ("NULL","'.$name.'","'.$description.'","'.$website.'",'.$private.',"'.$type.'","'.$sport.'","'.$photoURL.'","'.$city.'")');
+  $query = 'INSERT INTO `groups` (Name, Description, Website, Private, Type, Sport, LogoURL, City) VALUES (?,?,?,?,?,?,?,?)';
 
-  if($result){
-    return $mysqli->insert_id;;
+  $statement = $mysqli->prepare($query);
+  $statement->bind_param("sssissss", $name, $description, $website, $private, $type, $sport, $photo_url, $city);
+  $statement->execute();
+
+  if($statement){
+    return $statement->insert_id;;
   }else{
     return -1;
   }
 }
 
 function updateGroupLogo($mysqli, $groupID, $url){
-  $result = $mysqli->query('UPDATE groups SET LogoURL = "'.$url.'" WHERE ID = '.$groupID.'');
+  $query = 'UPDATE groups SET LogoURL = ? WHERE ID = ?';
 
-  if($result){
+  $statement = $mysqli->prepare($query);
+  $statement->bind_param("si", $url, $groupID);
+  $statement->execute();
+
+  if($statement){
     return 1;
   }else{
     return 0;
@@ -209,9 +234,18 @@ function updateGroupLogo($mysqli, $groupID, $url){
 }
 
 function getAccountFromDB($mysqli, $userID){
-    $p = new userProfile();
-      $result = $mysqli->query("SELECT * FROM users WHERE UserID =".$userID."");
-         while($row = $result->fetch_row()){
+      $query = "SELECT UserID, Email, Password, FacebookID, Timezone, receiveUpdates, DateCreated FROM users WHERE UserID = ?";
+
+      $statement = $mysqli->prepare($query);
+
+      $statement->bind_param("i", $userID);
+      $statement->execute();
+      $result = $statement->get_result();
+
+      $p = new userProfile();
+
+
+      $row = $result->fetch_array(MYSQLI_NUM);
              $p->userID = $row[0];
              $p->email = $row[1];
              $p->password = $row[2]; 
@@ -219,112 +253,149 @@ function getAccountFromDB($mysqli, $userID){
              $p->timezone = $row[4];
              $p->receiveUpdates = $row[5];
              $p->dateCreated = $row[6];
-          }
-        $result->close();
+          
+      $result->close();
       return $p;
 }
 
 function getUserProfileFromDB($mysqli, $userID){
-		$p = new userProfile();
-			$result = $mysqli->query("SELECT users.*,profiles.* FROM users LEFT JOIN profiles ON users.userID = profiles.userID WHERE users.UserID =".$userID."");
-         while($row = $result->fetch_row()){
+    $userColumns = "users.UserID, users.Email, users.FacebookID, users.Timezone, users.receiveUpdates, users.DateCreated";
+    $profileColumns = "profiles.FirstName, profiles.LastName, profiles.Gender, profiles.Birthday, profiles.Weight, profiles.Height, profiles.Bio, profiles.Prof_Pic_URL";
+
+    $query = "SELECT ".$userColumns.", ".$profileColumns." FROM users LEFT JOIN profiles ON users.userID = profiles.userID WHERE users.UserID = ?";
+
+    $statement = $mysqli->prepare($query);
+
+      $statement->bind_param("i", $userID);
+      $statement->execute();
+      $result = $statement->get_result();
+
+      $p = new userProfile();
+
+      $row = $result->fetch_array(MYSQLI_NUM);
        			 $p->userID = $row[0];
        			 $p->email = $row[1];
-       			 //$p->password = $row[2]; no need for password....
-       			 $p->facebookID = $row[3];
-       			 $p->timezone = $row[4];
-             $p->receiveUpdates = $row[5];
-       			 $p->dateCreated = $row[6];
-       			 $p->firstName = $row[8];
-       			 $p->lastName = $row[9];
-       			 $p->gender = $row[10];
-       			 $p->birthday = $row[11];
-       			 $p->weight = $row[12];
-       			 $p->height = $row[13];
-       			 $p->bio = $row[14];
-             $p->profPicURL = $row[15];
+       			 $p->facebookID = $row[2];
+       			 $p->timezone = $row[3];
+             $p->receiveUpdates = $row[4];
+       			 $p->dateCreated = $row[5];
+       			 $p->firstName = $row[6];
+       			 $p->lastName = $row[7];
+       			 $p->gender = $row[8];
+       			 $p->birthday = $row[9];
+       			 $p->weight = $row[10];
+       			 $p->height = $row[11];
+       			 $p->bio = $row[12];
+             $p->profPicURL = $row[13];
              $p->groups = getUsersGroups($mysqli,$userID);
-      		}
-    		$result->close();
+      		
+    	$result->close();
     	return $p;
 }
 
   function getUserProfileShort($mysqli, $userID){//dont include groups
-    $p = new userProfile();
-      $result = $mysqli->query("SELECT users.*,profiles.* FROM users LEFT JOIN profiles ON users.userID = profiles.userID WHERE users.UserID =".$userID."");
-         while($row = $result->fetch_row()){
+    $userColumns = "users.UserID, users.Email, users.FacebookID, users.Timezone, users.receiveUpdates, users.DateCreated";
+    $profileColumns = "profiles.FirstName, profiles.LastName, profiles.Gender, profiles.Birthday, profiles.Weight, profiles.Height, profiles.Bio, profiles.Prof_Pic_URL";
+
+    $query = "SELECT ".$userColumns.", ".$profileColumns." FROM users LEFT JOIN profiles ON users.userID = profiles.userID WHERE users.UserID = ?";
+
+    $statement = $mysqli->prepare($query);
+
+      $statement->bind_param("i", $userID);
+      $statement->execute();
+      $result = $statement->get_result();
+
+      $p = new userProfile();
+
+      $row = $result->fetch_array(MYSQLI_NUM);
              $p->userID = $row[0];
              $p->email = $row[1];
-             //$p->password = $row[2]; no need for password....
-             $p->facebookID = $row[3];
-             $p->timezone = $row[4];
-             $p->receiveUpdates = $row[5];
-             $p->dateCreated = $row[6];
-             $p->firstName = $row[8];
-             $p->lastName = $row[9];
-             $p->gender = $row[10];
-             $p->birthday = $row[11];
-             $p->weight = $row[12];
-             $p->height = $row[13];
-             $p->bio = $row[14];
-             $p->profPicURL = $row[15];
-          }
-        $result->close();
+             $p->facebookID = $row[2];
+             $p->timezone = $row[3];
+             $p->receiveUpdates = $row[4];
+             $p->dateCreated = $row[5];
+             $p->firstName = $row[6];
+             $p->lastName = $row[7];
+             $p->gender = $row[8];
+             $p->birthday = $row[9];
+             $p->weight = $row[10];
+             $p->height = $row[11];
+             $p->bio = $row[12];
+             $p->profPicURL = $row[13];
+          
+      $result->close();
       return $p;
   }
 
-  function getUserRidesFromDB($mysqli,$query,$timezone){
-     $rides = array();
-      $result = $mysqli->query("SELECT rides.*, rr.*, mrr.GroupID, 
-                                DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, 'UTC'),'%H:%i:%s') AS UTCStartTime, 
-                                DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.endTime)), rides.tzName, 'UTC'),'%H:%i:%s') AS UTCEndTime ,
-                                DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, '".$timezone."'),'%H:%i:%s') AS startTimeAdjust,
-                                DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.endTime)), rides.tzName, '".$timezone."'),'%H:%i:%s') AS endTimeAdjust,
-                                UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_start, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), rides.startTime), '%Y-%m-%d %T'), rides.tzName, '".$timezone."'), '%y-%m-%d'),'UTC',@@session.time_zone)) AS repeat_start_adjust,
-                                UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_end, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), IFNULL(rides.endTime,'')), '%Y-%m-%d %T'), rides.tzName, '".$timezone."'), '%y-%m-%d'),'UTC',@@session.time_zone)) AS repeat_end_adjust ,
-                                DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, '".$timezone."'),'%y-%m-%d') AS startDateAdjust,
-                                FROM `rides` LEFT JOIN `rides_repeat` rr ON rr.`ride_id` = rides.`ID` LEFT JOIN `multi_rider_rides` mrr ON mrr.RideID = rides.ID ".$query.''); //the two UTC for startDay Adjust are to make it so that the UNIX time is in UTC Before CONVERT_TZ is executed, or else the from_tz param would be incorrect
+  //HALF EDITED THIS FUNCTION THEN REALIZED IT ISNT USED, PROBABLY WONT WORK IF USED SINCE I MADE CHANGES AND DIDN'T TEST
+
+  // function getUserRidesFromDB($mysqli,$query,$timezone){
+  //     $rides = array();
+
+  //     $ridesColumns = "rides.ID, rides.CreatorID, rides.RouteID, rides.CreatorType, rides.RideType, rides.Title, rides.Description, rides.Level, rides.Visibility, rides.StartLat, rides.StartLon";
+  //     $ridesRepeatColumns = "rr.repeat_interval";
+
+
+  //     $result = $mysqli->query("SELECT ".$ridesColumns.", rr.repeat_interval, mrr.GroupID, 
+  //                               DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, 'UTC'),'%H:%i:%s') AS UTCStartTime, 
+  //                               DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.endTime)), rides.tzName, 'UTC'),'%H:%i:%s') AS UTCEndTime ,
+  //                               DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, '".$timezone."'),'%H:%i:%s') AS startTimeAdjust,
+  //                               DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.endTime)), rides.tzName, '".$timezone."'),'%H:%i:%s') AS endTimeAdjust,
+  //                               UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_start, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), rides.startTime), '%Y-%m-%d %T'), rides.tzName, '".$timezone."'), '%y-%m-%d'),'UTC',@@session.time_zone)) AS repeat_start_adjust,
+  //                               UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_end, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), IFNULL(rides.endTime,'')), '%Y-%m-%d %T'), rides.tzName, '".$timezone."'), '%y-%m-%d'),'UTC',@@session.time_zone)) AS repeat_end_adjust ,
+  //                               DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, '".$timezone."'),'%y-%m-%d') AS startDateAdjust,
+  //                               FROM `rides` LEFT JOIN `rides_repeat` rr ON rr.`ride_id` = rides.`ID` LEFT JOIN `multi_rider_rides` mrr ON mrr.RideID = rides.ID ".$query.''); //the two UTC for startDay Adjust are to make it so that the UNIX time is in UTC Before CONVERT_TZ is executed, or else the from_tz param would be incorrect
     
-      if (!$result) {
-           return $mysqli->error;
-        }
+  //     if (!$result) {
+  //          return $mysqli->error;
+  //       }
 
-        $i = 0;
+  //       $i = 0;
 
-          while ($row = $result->fetch_row()) {
-            $r = new ride();
-              $r->rideID = $row[0];
-              $r->creatorID = $row[1];
-              $r->routeID = $row[2];
-              $r->creatorType = $row[3];
-              $r->rideType = $row[4];
-              $r->startTime = $row[22]; //all times are in GMT
-              $r->endTime = $row[23];
-              $r->title = $row[8];
-              $r->description = $row[9];
-              $r->level = $row[10];
-              $r->visibility = $row[11];
-              $r->startLat = $row[12];
-              $r->startLon = $row[13];
-              $r->startDate = $row[24];
-              $r->endDate = $row[25];
-              $r->repeatInterval = $row[18];
-              $r->creatorProfile = getUserProfileFromDB($mysqli,$row[1]);
-              if($row[19] != null){
-              $r->group = getGroupFromDB($mysqli,$row[19]);
-              }
-              $r->UTCStartTime = $row[20];
-              $r->UTCEndTime = $row[21];
-            $rides[$i] = $r;
-            $i++;
-          }
-      return $rides;
-  }
+  //         while ($row = $result->fetch_row()) {
+  //           $r = new ride();
+  //             $r->rideID = $row[0];
+  //             $r->creatorID = $row[1];
+  //             $r->routeID = $row[2];
+  //             $r->creatorType = $row[3];
+  //             $r->rideType = $row[4];
+  //             $r->title = $row[5];
+  //             $r->description = $row[6];
+  //             $r->level = $row[7];
+  //             $r->visibility = $row[8];
+  //             $r->startLat = $row[9];
+  //             $r->startLon = $row[10];
+  //             $r->repeatInterval = $row[11];
 
-  function getUserRidesWithDateRangeFromDB($mysqli,$query,$timezone, $startDate, $endDate){
-    //NOT SHOWING UPDATED DATE ON FEED
+  //             $r->UTCStartTime = $row[13];
+  //             $r->UTCEndTime = $row[14];
+
+  //             $r->startTime = $row[15]; //all times are in GMT
+  //             $r->endTime = $row[16];
+              
+
+  //             $r->startDate = $row[17];
+  //             $r->endDate = $row[18];
+
+  //             $r->creatorProfile = getUserProfileFromDB($mysqli,$row[1]);
+
+  //             if($row[12] != null){
+  //             $r->group = getGroupFromDB($mysqli,$row[12]);
+  //             }
+
+  //           $rides[$i] = $r;
+  //           $i++;
+  //         }
+  //     return $rides;
+  // }
+
+
+  //this function is used for the profile page too and luckily already isn't succeptible to sql injection. Though need to update in future if there are more filter options for profile
+  function getUserRidesWithDateRangeFromDB($mysqli,$query,$timezone, $startDate, $endDate, $startingAfterTime, $startingBeforeTime, $rideType, $rideLevel){
      $rides = array();
-      $result = $mysqli->query("SELECT rides.*, rr.*, mrr.GroupID, 
+     $ridesColumns = "rides.ID, rides.CreatorID, rides.RouteID, rides.CreatorType, rides.RideType, rides.Title, rides.Description, rides.Level, rides.Visibility, rides.StartLat, rides.StartLon";
+
+     $query = "SELECT ".$ridesColumns.", rr.repeat_interval, mrr.GroupID,
                                 DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, 'UTC'),'%H:%i:%s') AS UTCStartTime, 
                                 DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.endTime)), rides.tzName, 'UTC'),'%H:%i:%s') AS UTCEndTime ,
                                 DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(rides.startTime)), rides.tzName, '".$timezone."'),'%H:%i:%s') AS startTimeAdjust,
@@ -332,38 +403,48 @@ function getUserProfileFromDB($mysqli, $userID){
                                 UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_start, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), rides.startTime), '%Y-%m-%d %T'), rides.tzName, '".$timezone."'), '%y-%m-%d'),'UTC',@@session.time_zone)) AS repeat_start_adjust,
                                 UNIX_TIMESTAMP(CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(STR_TO_DATE(CONCAT(DATE_FORMAT(CONVERT_TZ(FROM_UNIXTIME(rr.repeat_end, '%y-%m-%d %T'), @@session.time_zone,'UTC'), '%y-%m-%d'), IFNULL(rides.endTime,'')), '%Y-%m-%d %T'), rides.tzName, '".$timezone."'), '%y-%m-%d'),'UTC',@@session.time_zone)) AS repeat_end_adjust ,
                                 getStartDate(rr.repeat_start, ".$startDate.", rr.repeat_interval) AS realStartDate
-                                FROM `rides` LEFT JOIN `rides_repeat` rr ON rr.`ride_id` = rides.`ID` LEFT JOIN `multi_rider_rides` mrr ON mrr.RideID = rides.ID ".$query.''); //the two UTC for startDay Adjust are to make it so that the UNIX time is in UTC Before CONVERT_TZ is executed, or else the from_tz param would be incorrect
+                                FROM `rides` LEFT JOIN `rides_repeat` rr ON rr.`ride_id` = rides.`ID` LEFT JOIN `multi_rider_rides` mrr ON mrr.RideID = rides.ID ".$query.''; 
+
     
-      if (!$result) {
-           return $mysqli->error;
-        }
+      $statement = $mysqli->prepare($query);
 
-        $i = 0;
+      $statement->bind_param("isss", $rideType, $rideLevel, $startingAfterTime, $startingBeforeTime);
+      $statement->execute();
+      $result = $statement->get_result();
 
-          while ($row = $result->fetch_row()) {
+      $i = 0;
+
+      while($row = $result->fetch_array(MYSQLI_NUM)){
             $r = new ride();
               $r->rideID = $row[0];
               $r->creatorID = $row[1];
               $r->routeID = $row[2];
               $r->creatorType = $row[3];
               $r->rideType = $row[4];
-              $r->startTime = $row[22]; //all times are in GMT
-              $r->endTime = $row[23];
-              $r->title = $row[8];
-              $r->description = $row[9];
-              $r->level = $row[10];
-              $r->visibility = $row[11];
-              $r->startLat = $row[12];
-              $r->startLon = $row[13];
-              $r->startDate = $row[26];
-              $r->endDate = $row[25];
-              $r->repeatInterval = $row[18];
+              $r->title = $row[5];
+              $r->description = $row[6];
+              $r->level = $row[7];
+              $r->visibility = $row[8];
+              $r->startLat = $row[9];
+              $r->startLon = $row[10];
+              $r->repeatInterval = $row[11];
+
+              $r->UTCStartTime = $row[13];
+              $r->UTCEndTime = $row[14];
+
+              $r->startTime = $row[15]; //all times are in GMT
+              $r->endTime = $row[16];
+              
+
+              $r->startDate = $row[19];
+              $r->endDate = $row[18];
+
               $r->creatorProfile = getUserProfileFromDB($mysqli,$row[1]);
-              if($row[19] != null){
-              $r->group = getGroupFromDB($mysqli,$row[19]);
+
+              if($row[12] != null){
+              $r->group = getGroupFromDB($mysqli,$row[12]);
               }
-              $r->UTCStartTime = $row[20];
-              $r->UTCEndTime = $row[21];
+
             $rides[$i] = $r;
             $i++;
           }
@@ -372,7 +453,7 @@ function getUserProfileFromDB($mysqli, $userID){
 
  
 
-  function getSingleGroupRidesFromDB($mysqli, $query, $timezone){
+  function getSingleGroupRidesFromDB($mysqli, $query, $timezone){//UP NEXT, this function and find all SQL interactive functions not in dbHelper and bring them here and update them
     $rides = array();
       $result = $mysqli->query("SELECT r.*, rr.*, p.firstName, p.lastName, mrr.GroupID,
                                 DATE_FORMAT(CONVERT_TZ( ADDTIME(DATE(DATE_ADD('1970-01-01', INTERVAL rr.repeat_start MINUTE_SECOND)), TIME(r.startTime)), r.tzName, '".$timezone."'),'%H:%i:%s') AS startTimeAdjust,

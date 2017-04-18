@@ -57,7 +57,7 @@
 		$query.= ' AND '.$joinedRidesQuery.''.$createdRidesQuery.'';//can do both because with this being in the else statement, one of the varibales will be ''
 	}
 
-	$rides = (!$joinedRides && !$createdRides) ? '' : getUserRidesWithDateRangeFromDB($mysqli,$query,$timezone, $startDate, $endDate);
+	$rides = (!$joinedRides && !$createdRides) ? '' : getUserRidesWithDateRangeFromDB($mysqli,$query,$timezone, $startDate, $endDate, null, null, null, null);
 
 	$mysqli->close();
 

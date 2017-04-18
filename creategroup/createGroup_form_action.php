@@ -11,7 +11,7 @@
 	$name = $_POST["name"];
 	$description = $mysqli->real_escape_string($_POST["description"]);
 	$website = $mysqli->real_escape_string($_POST["website"]);
-	$private = $mysqli->real_escape_string(isset($_POST['private']) ? $_POST['private'] : "false");
+	$private = $mysqli->real_escape_string(isset($_POST['private']) ? 1 : 0); //true/false
 	$type = $mysqli->real_escape_string($_POST["type"]);
 	$sport = $mysqli->real_escape_string($_POST["sport"]);
 

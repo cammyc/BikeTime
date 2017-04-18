@@ -52,6 +52,7 @@ body { height: 100%; margin: 0; padding: 0; overflow: hidden; }
 
 .socialFeed{
 	position: absolute !important;
+	display: none;
     /* width: 90%; */
     /* height: auto; */
     top: 65px;

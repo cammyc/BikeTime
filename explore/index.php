@@ -74,7 +74,7 @@
 
 					$mysqli = getDB();
 
-					$groups = getMultipleGroups($mysqli, "SELECT * FROM `groups`");
+					$groups = getMultipleGroups($mysqli);
 
 						for ($i=0; $i < sizeof($groups); $i++) { 
 							$group = $groups[$i];

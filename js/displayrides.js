@@ -9,7 +9,7 @@ function showRides(args){
 	var getRidesRequest = getRides(args);
 
 		getRidesRequest.done(function(result) {
-			//console.log(result)
+			// console.log(result)
 	    var rides = JSON.parse(result);
 
         for(var i = 0; i<rides.length;i++){
@@ -30,6 +30,7 @@ function showFeed(args, listID){
 	var getRidesForStreamRequest = getRides(args);
 
 	getRidesForStreamRequest.done(function(result) {
+		// console.log(result)
 	    var rides = JSON.parse(result);
 
         if(rides.length > 0){
