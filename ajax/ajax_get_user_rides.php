@@ -3,11 +3,17 @@
 
 	$mysqli = getDB();
 
+	$userID = getEncryptedUserIDCookie($mysqli,$mysqli->escape_string($_COOKIE['UserID']));
+
+	if($userID == -1){
+		die();
+	}
+
 	$rideCriteria = array();
 
 	$startDate = mysql_escape_string($_GET['startDate']);
 	$endDate = mysql_escape_string($_GET['endDate']);
-	$userID = mysql_escape_string($_GET['userID']);
+	// $userID = mysql_escape_string($_GET['userID']); //get logged in user from session variable, this is succeptible to a hack rn
 	$timezone = mysql_escape_string($_GET['timezone']);
 	$joinedRides = (mysql_escape_string($_GET['joinedRides']) == 'true') ? true : false;
 	$createdRides = (mysql_escape_string($_GET['createdRides']) == 'true') ? true : false;

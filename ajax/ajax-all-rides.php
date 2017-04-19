@@ -3,6 +3,9 @@
 
 	$mysqli = getDB();
 
+	$userID = getEncryptedUserIDCookie($mysqli,$mysqli->escape_string($_COOKIE['UserID'])); //don't kill page if -1 because don't need to be logged in here
+
+
 	$rideCriteria = array();
 
 	$startDate = mysql_escape_string($_GET['startDate']);
@@ -15,7 +18,7 @@
 
 
 	$level = mysql_escape_string($_GET['level']);
-	$userID = mysql_escape_string($_GET['userID']);
+	//$userID = mysql_escape_string($_GET['userID']);//get logged in user from session/cookie variable, this is succeptible to a hack rn. If invalid kill page
 	$groupRides = mysql_escape_string($_GET['groupRides']);
 	$friendRides = mysql_escape_string($_GET['friendRides']);
 	$publicRides = !empty(mysql_escape_string($_GET['publicRides']));
