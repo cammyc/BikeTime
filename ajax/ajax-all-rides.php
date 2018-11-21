@@ -35,6 +35,8 @@
 
 		if(sizeof($groups) > 0){
 			$groupRidesQuery .= '(CreatorType = 1 AND ('.implode(" OR ", $groups).'))';
+		}else{
+			$groupRidesQuery = "";
 		}
 	}
 
@@ -91,6 +93,7 @@
 	$rides = getUserRidesWithDateRangeFromDB($mysqli,$query,$timezone, $startDate, $endDate, $startingAfter, $startingBefore, $rideType, $level);
 	
 	echo json_encode($rides);
+	// echo $rides;
 	
 	// echo $query;
 	$mysqli->close();

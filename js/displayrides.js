@@ -30,7 +30,7 @@ function showFeed(args, listID){
 	var getRidesForStreamRequest = getRides(args);
 
 	getRidesForStreamRequest.done(function(result) {
-		// console.log(result)
+		 // console.log(result)
 	    var rides = JSON.parse(result);
 
         if(rides.length > 0){
@@ -440,7 +440,7 @@ function getRouteCoords(_rideID){
 
 		var _icon = {
 		    url: image, // url
-		    scaledSize: new google.maps.Size(30, 30), // scaled size
+		    scaledSize: new google.maps.Size(30, 30) // scaled size
 		};
 
 		markers[ID] = new google.maps.Marker({

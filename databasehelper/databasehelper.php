@@ -405,7 +405,6 @@ function getUserProfileFromDB($mysqli, $userID){
                                 getStartDate(rr.repeat_start, ".$startDate.", rr.repeat_interval) AS realStartDate
                                 FROM `rides` LEFT JOIN `rides_repeat` rr ON rr.`ride_id` = rides.`ID` LEFT JOIN `multi_rider_rides` mrr ON mrr.RideID = rides.ID ".$query.''; 
 
-    
       $statement = $mysqli->prepare($query);
 
       $statement->bind_param("isss", $rideType, $rideLevel, $startingAfterTime, $startingBeforeTime);
@@ -449,6 +448,8 @@ function getUserProfileFromDB($mysqli, $userID){
             $i++;
           }
       return $rides;
+
+          //return $query;
   }
 
  
